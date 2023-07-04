@@ -1,0 +1,79 @@
+.sidebar {
+  height: 100vh;
+  /* top: 0; */
+  /* left: 0; */
+  position: fixed;
+  width: 15vw;
+  color: #495057;
+  flex-direction: column;
+  /* background-color: red; */
+  display: flex;
+}
+.sidebar_logo {
+  padding: 1.8rem;
+  box-sizing: border-box;
+  width: 12rem;
+}
+.sidebar_logo img {
+  width: 100%;
+}
+
+.sidebar_details ul {
+  margin-top: 2.5rem;
+  list-style: none;
+  /* margin: 0; */
+  padding: 0;
+}
+
+.sidebar_details ul li {
+  padding: 0.55rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding-left: 1.8rem;
+}
+
+.sidebar_details ul li span {
+  padding-left: 1.2rem;
+}
+
+.sidebar_details ul li:first-child {
+  width: 0.5rem;
+}
+
+.sidebar_details ul li:first-child:before {
+  /* border-left: 10px solid black; */
+  content: "";
+  position: absolute;
+  left: 0;
+  /* top: 0; */
+  height: 5%;
+  width: 10px;
+  background-color: black;
+  /* display: none; */
+  display: block;
+}
+
+.sidebar_details:before {
+}
+
+/* .sidebar_details.active:before {
+} */
+
+.settings_profile {
+  margin-top: auto;
+}
+
+.settings_profile ul li {
+  list-style: none;
+  padding: 0.55rem;
+  display: flex;
+  padding-left: 1.8rem;
+
+  box-sizing: border-box;
+  /* padding-left: 1.8rem; */
+}
+.settings_profile ul li span {
+  padding-left: 1.2rem;
+}
