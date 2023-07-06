@@ -1,9 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
-import Sidebar from "./components/sidebar/sidebar";
 import Sign from "./pages/signup/signup";
 import Dashboard from "./pages/dashboard/dashboard";
 import Overview from "./components/overview/overview";
 export const router = createBrowserRouter([
+  {
+    path: "",
+    element: <Dashboard />,
+  },
   {
     path: "/dashboard",
     element: <Dashboard />,
@@ -13,11 +16,11 @@ export const router = createBrowserRouter([
         element: <Overview />,
       },
       {
-        path: "hey",
+        path: "property",
         element: <div>I am a hey</div>,
       },
       {
-        path: "overview",
+        path: "watchlist",
         element: <div>I am a lamb</div>,
       },
       {

@@ -23,40 +23,46 @@ const Sidebar = () => (
       <div className="sidebar_details">
         <ul>
           <li>
-            <Link to="/dashboard/overview">
-              <ReactSVG src={Overview} />
+            <Link className="link_el" to="/dashboard/overview">
+              <ReactSVG className="svg_icons" src={Overview} />
               <span>Overview</span>
             </Link>
           </li>
           <li>
-            {" "}
-            <ReactSVG src={Property} />
-            <span>Property</span>
+            <Link className="link_el" to="/dashboard/property">
+              <ReactSVG className="svg_icons" src={Property} />
+              <span>Property</span>
+            </Link>
           </li>
           <li>
-            {" "}
-            <ReactSVG src={WatchList} />
-            <span>Watch List</span>
+            <Link className="link_el" to="/dashboard/watchlist">
+              <ReactSVG className="svg_icons" src={WatchList} />
+              <span>WatchList</span>
+            </Link>
           </li>
           <li>
-            {" "}
-            <ReactSVG src={MarketTrends} />
-            <span>Market Trends</span>
+            <Link className="link_el" to="/dashboard/market-trends">
+              <ReactSVG className="svg_icons" src={MarketTrends} />
+              <span>MarketTrends</span>
+            </Link>
           </li>
           <li>
-            {" "}
-            <ReactSVG src={Map} />
-            <span>Map</span>
+            <Link className="link_el" to="/dashboard/map">
+              <ReactSVG className="svg_icons" src={Map} />
+              <span>Map</span>
+            </Link>
           </li>
           <li>
-            {" "}
-            <ReactSVG src={News} />
-            <span>News</span>
+            <Link className="link_el" to="/dashboard/mews">
+              <ReactSVG className="svg_icons" src={News} />
+              <span>News</span>
+            </Link>
           </li>
           <li>
-            {" "}
-            <ReactSVG src={Estimator} />
-            <span>Estimator</span>
+            <Link className="link_el" to="/dashboard/estimator">
+              <ReactSVG className="svg_icons" src={Estimator} />
+              <span>Estimator</span>
+            </Link>
           </li>
         </ul>
       </div>

@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 import "./signup.css";
 
 import signup_background from "../../assets/signup_background.png";
 import logo from "../../assets/logo.png";
+import { Link } from "react-router-dom";
 
 class Sign extends Component {
   render() {
@@ -82,7 +82,7 @@ class Sign extends Component {
             </form>
           </div>
           <div className="signin_link">
-            Already have an account <a href="#">Sign In</a>
+            Already have an account <Link href="#">Sign In</Link>
           </div>
         </div>
       </div>

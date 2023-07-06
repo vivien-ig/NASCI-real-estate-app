@@ -6,7 +6,6 @@
   width: 15vw;
   color: #495057;
   flex-direction: column;
-  /* background-color: red; */
   display: flex;
 }
 .sidebar_logo {
@@ -26,9 +25,10 @@
 }
 
 .sidebar_details ul li {
-  padding: 0.55rem;
+  padding: 0.65rem;
   box-sizing: border-box;
   display: flex;
+  font-size: 0.8em;
   flex-direction: row;
   width: 100%;
   padding-left: 1.8rem;
@@ -65,9 +65,13 @@
   margin-top: auto;
 }
 
+.overview_details * {
+  background-color: white;
+}
 .settings_profile ul li {
   list-style: none;
   padding: 0.55rem;
+  font-size: 0.8rem;
   display: flex;
   padding-left: 1.8rem;
 
@@ -76,4 +80,10 @@
 }
 .settings_profile ul li span {
   padding-left: 1.2rem;
+}
+
+.link_el {
+  display: flex;
+  text-decoration: none;
+  color: black;
 }
