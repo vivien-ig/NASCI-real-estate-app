@@ -9,7 +9,7 @@
   flex-direction: column;
 
   /* height: 80%; */
-  padding: 1.5rem;
+  padding: 2.5rem;
 }
 
 .overview_info input {
@@ -133,15 +133,28 @@
   padding-top: 0;
   height: auto;
   margin-top: 1rem;
+  grid-template-areas:
+    "news_card_img news_card_title"
+    "news_card_img news_card_date";
   display: grid;
 }
 .news_card_title {
   font-weight: 500;
+  grid-area: news_card_title;
 }
 .news_card_date {
   display: flex;
   margin-top: 0.15rem;
+  grid-area: news_card_date;
 }
 .news_card_date span {
   margin-left: 0.5rem;
+}
+
+.news_card_img {
+  /* width: 100%; */
+  grid-area: news_card_img;
+}
+.news_card_img img {
+  width: 90%;
 }

@@ -2,7 +2,9 @@ import React from "react";
 import "./overview.css";
 import Calendar from "../../../assets/calendar.svg";
 import Location from "../../../assets/dashboardicons/location.svg";
+import newsImg from "./news_placeholder.svg";
 import { ReactSVG } from "react-svg";
+import { v4 as uuidv4 } from "uuid";
 
 const newsListArray = [1, 2, 3, 4];
 
@@ -35,8 +37,10 @@ const Overview = () => (
         <h2>News</h2>
         <div className="news_list">
           {newsListArray.map((el) => (
-            <div className="news_card">
-              <div className="news_card_img"></div>
+            <div key={uuidv4()} className="news_card">
+              <div className="news_card_img">
+                <img src={newsImg} alt="News" />
+              </div>
               <div className="news_card_title">
                 Government of Canada increases tax on real estate
               </div>

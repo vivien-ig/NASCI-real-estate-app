@@ -35,7 +35,7 @@ const Sidebar = () => (
             </Link>
           </li>
           <li>
-            <Link className="link_el" to="/dashboard/watchlist">
+            <Link className="link_el" to="/dashboard/watch-list">
               <ReactSVG className="svg_icons" src={WatchList} />
               <span>WatchList</span>
             </Link>
@@ -53,7 +53,7 @@ const Sidebar = () => (
             </Link>
           </li>
           <li>
-            <Link className="link_el" to="/dashboard/mews">
+            <Link className="link_el" to="/dashboard/news">
               <ReactSVG className="svg_icons" src={News} />
               <span>News</span>
             </Link>

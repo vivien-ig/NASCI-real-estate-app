@@ -1,14 +1,62 @@
 .house-detail-card {
-  border: 1px solid red;
-  width: 90%;
-  margin: 5%;
+  border: 1px solid black;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+}
+.house-detail-card h4 {
+  font-size: 0.95rem;
+}
+
+.house-detail-card img {
+  flex: 2;
+  /* width: 10%; */
+}
+
+.house-details-data {
+  flex: 2;
+  padding: 1.2rem;
   box-sizing: border-box;
   display: grid;
+}
+
+.house-details-top {
+  display: flex;
+}
+.house-details-top :first-child {
+  margin-right: auto;
+}
+.house-details-forsale {
+  background-color: #dee2e6;
+  color: black;
+  font-size: 0.7rem;
+  height: 1rem;
+  padding: 0.5rem;
+}
+.house-details-days {
+  color: #5d5fef;
+}
+.house-details-btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.house-details-info {
+  display: grid;
+  font-size: 0.65rem;
   grid-template-areas:
-    ""
-    ""
-    ""
-    ""
-    ""
-    "";
+    "bedrooms bathrooms"
+    "squarefeet .";
+}
+.house-details-info span {
+  display: flex;
+}
+.house-details-bedrooms {
+  grid-area: bedrooms;
+}
+.house-details-bathrooms {
+  grid-area: bathrooms;
+}
+.house-details-squarefeet {
+  grid-area: squarefeet;
 }

@@ -1,4 +1,4 @@
-.news_page {
+.watchlist_page {
   width: 75vw;
   min-height: 100vh;
   position: absolute;
@@ -8,5 +8,6 @@
   background-color: #f2f5f8;
   flex-direction: column;
 
+  /* height: 80%; */
   padding: 2.5rem;
 }

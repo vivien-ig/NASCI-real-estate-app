@@ -1,11 +1,5 @@
-import React, { lazy, Suspense } from 'react';
+import React from "react";
 
-const LazyNews = lazy(() => import('./News'));
-
-const News = props => (
-  <Suspense fallback={null}>
-    <LazyNews {...props} />
-  </Suspense>
-);
+const News = (props) => <></>;
 
 export default News;
