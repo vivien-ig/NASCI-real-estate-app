@@ -1,0 +1,13 @@
+.property {
+  width: 75vw;
+  min-height: 100vh;
+  position: absolute;
+  right: 0;
+  display: flex;
+
+  background-color: #f2f5f8;
+  flex-direction: column;
+
+  /* height: 80%; */
+  padding: 1.5rem;
+}

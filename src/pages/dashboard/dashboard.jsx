@@ -6,10 +6,7 @@ import { Outlet } from "react-router-dom";
 const Dashboard = () => (
   <div className="dashboard">
     <Sidebar />
-
-    {/* <div> */}
     <Outlet />
-    {/* </div> */}
   </div>
 );
 

@@ -23,10 +23,20 @@
 }
 .overview_info {
   flex: 2;
-  text-align: bottom;
   color: black;
+  display: flex;
+  flex-direction: column;
 }
 
+.overview_info_details {
+  display: flex;
+  flex-direction: row;
+}
+.overview_info_details :last-child {
+  margin-left: auto;
+  display: flex;
+  font-size: 0.85rem;
+}
 .overview_details {
   color: black;
   display: grid;
@@ -39,6 +49,7 @@
     "maps maps maps maps maps maps ";
   gap: 2rem 2rem;
   grid-auto-columns: 1fr; /* Set the width for automatically generated columns */
+  /* grid-auto-rows: 2fr; */
 }
 
 .sales_price,
@@ -65,7 +76,7 @@
 .sales_des {
   grid-area: sales_des;
   font-size: 0.95rem;
-  line-height: 1.25rem;
+  line-height: 1.5rem;
 }
 .sales_cost {
   grid-area: sales_cost;
@@ -106,4 +117,31 @@
 }
 .maps {
   grid-area: maps;
+}
+
+.news_list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .news_list :first-child {
+  margin-top: 1.2rem;
+} */
+
+.news_card {
+  padding: 0.5rem;
+  padding-top: 0;
+  height: auto;
+  margin-top: 1rem;
+  display: grid;
+}
+.news_card_title {
+  font-weight: 500;
+}
+.news_card_date {
+  display: flex;
+  margin-top: 0.15rem;
+}
+.news_card_date span {
+  margin-left: 0.5rem;
 }

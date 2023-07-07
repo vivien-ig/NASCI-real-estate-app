@@ -1,7 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import Sign from "./pages/signup/signup";
+import Property from "./pages/dashboard/property/property";
 import Dashboard from "./pages/dashboard/dashboard";
-import Overview from "./components/overview/overview";
+import Overview from "./pages/dashboard/overview/overview";
 export const router = createBrowserRouter([
   {
     path: "",
@@ -17,7 +18,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "property",
-        element: <div>I am a hey</div>,
+        element: <Property />,
       },
       {
         path: "watchlist",

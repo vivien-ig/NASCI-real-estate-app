@@ -1,12 +1,22 @@
 import React from "react";
 import "./overview.css";
+import Calendar from "../../../assets/calendar.svg";
+import Location from "../../../assets/dashboardicons/location.svg";
+import { ReactSVG } from "react-svg";
+
+const newsListArray = [1, 2, 3, 4];
 
 const Overview = () => (
   <div className="overview">
     <div className="overview_info">
       <input placeholder="Search" type="text" />
       <br />
-      Home
+      <div className="overview_info_details">
+        <span>Home</span>
+        <span>
+          Location: <ReactSVG src={Location} /> &nbsp;&nbsp;&nbsp;Ontario
+        </span>
+      </div>
     </div>
     <div className="overview_details">
       <div className="sales_price">
@@ -24,10 +34,18 @@ const Overview = () => (
       <div className="news">
         <h2>News</h2>
         <div className="news_list">
-          <div className="news_card">Image Description Date</div>
-          <div className="news_card">Image Description Date</div>
-          <div className="news_card">Image Description Date</div>
-          <div className="news_card">Image Description Date</div>
+          {newsListArray.map((el) => (
+            <div className="news_card">
+              <div className="news_card_img"></div>
+              <div className="news_card_title">
+                Government of Canada increases tax on real estate
+              </div>
+              <div className="news_card_date">
+                <ReactSVG className="svg_icons" src={Calendar} />
+                <span>9, Jan, 2022</span>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
       <div className="major_construction_zones">Major Construction</div>
