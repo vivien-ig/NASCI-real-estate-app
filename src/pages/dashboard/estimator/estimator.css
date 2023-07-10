@@ -1,4 +1,4 @@
-.map {
+.estimator {
   width: 75vw;
   min-height: 100vh;
   position: absolute;
@@ -7,7 +7,6 @@
 
   background-color: #f2f5f8;
   flex-direction: column;
-  /* background-color: red; */
 
   /* height: 80%; */
   padding: 2.5rem;

@@ -6,7 +6,9 @@ import Dashboard from "./pages/dashboard/dashboard";
 import Overview from "./pages/dashboard/overview/overview";
 import News from "./pages/dashboard/news/news";
 import Watchlist from "./pages/dashboard/watchlist/watchlist";
+import Estimator from "./pages/dashboard/estimator/estimator";
 import NewsNewsDetail from "./pages/dashboard/news/news-detail/news-detail";
+import Map from "./pages/dashboard/map/map";
 export const router = createBrowserRouter([
   {
     path: "",
@@ -33,12 +35,20 @@ export const router = createBrowserRouter([
         element: <News />,
       },
       {
+        path: "map",
+        element: <Map />,
+      },
+      {
         path: "news/:id",
         element: <NewsNewsDetail />,
       },
       {
         path: "watch-list",
         element: <Watchlist />,
+      },
+      {
+        path: "estimator",
+        element: <Estimator />,
       },
     ],
   },

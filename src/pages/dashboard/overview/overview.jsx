@@ -5,6 +5,7 @@ import Location from "../../../assets/dashboardicons/location.svg";
 import newsImg from "./news_placeholder.svg";
 import { ReactSVG } from "react-svg";
 import { v4 as uuidv4 } from "uuid";
+import MapComp from "src/components/mapComp/mapComp";
 
 const newsListArray = [1, 2, 3, 4];
 
@@ -53,7 +54,10 @@ const Overview = () => (
         </div>
       </div>
       <div className="major_construction_zones">Major Construction</div>
-      <div className="maps">Maps</div>
+      <div className="overview_maps">
+        Maps
+        <MapComp />
+      </div>
     </div>
   </div>
 );

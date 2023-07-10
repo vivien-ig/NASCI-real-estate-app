@@ -65,8 +65,9 @@
   margin-top: auto;
 }
 
-.overview_details * {
+.overview_details > * {
   background-color: white;
+  /* background-color: transparent; */
 }
 .settings_profile ul li {
   list-style: none;

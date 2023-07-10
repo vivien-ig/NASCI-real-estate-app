@@ -45,8 +45,8 @@
     "sales_price sales_price listings listings news news"
     "major_construction_zones major_construction_zones major_construction_zones major_construction_zones news news"
     "major_construction_zones major_construction_zones major_construction_zones major_construction_zones news news"
-    "maps maps maps maps maps maps "
-    "maps maps maps maps maps maps ";
+    "overview_maps overview_maps overview_maps overview_maps overview_maps overview_maps "
+    "overview_maps overview_maps overview_maps overview_maps overview_maps overview_maps ";
   gap: 2rem 2rem;
   grid-auto-columns: 1fr; /* Set the width for automatically generated columns */
   /* grid-auto-rows: 2fr; */
@@ -56,7 +56,7 @@
 .listings,
 .news,
 .major_construction_zones,
-.maps {
+.overview_maps {
   padding: 0.75rem;
   box-sizing: border-box;
   width: 100%;
@@ -115,8 +115,11 @@
 .major_construction_zones {
   grid-area: major_construction_zones;
 }
-.maps {
-  grid-area: maps;
+.overview_maps {
+  grid-area: overview_maps;
+  min-height: 70vh;
+  width: 100%;
+  position: relative;
 }
 
 .news_list {
