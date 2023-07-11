@@ -15,7 +15,15 @@ const PropertyDetail = () => {
         </Link>
         <br />
         <img style={{ width: "100%" }} src={NewsImg} alt="home" />
-        <div className="property_detail_info"></div>
+        <div className="property_detail_info">
+          <ol>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ol>
+        </div>
       </div>
     </>
   );
