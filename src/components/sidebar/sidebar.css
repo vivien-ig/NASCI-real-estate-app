@@ -63,6 +63,8 @@
 
 .settings_profile {
   margin-top: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .overview_details > * {

@@ -12,15 +12,6 @@
   padding: 2.5rem;
 }
 
-.overview_info input {
-  box-sizing: border-box;
-  /* padding: 1rem; */
-  padding-left: 0.5rem;
-  height: 2.5rem;
-  width: 30%;
-  margin-top: 3rem;
-  margin-bottom: 2rem;
-}
 .overview_info {
   flex: 2;
   color: black;
@@ -31,6 +22,7 @@
 .overview_info_details {
   display: flex;
   flex-direction: row;
+  margin-top: 2rem;
 }
 .overview_info_details :last-child {
   margin-left: auto;

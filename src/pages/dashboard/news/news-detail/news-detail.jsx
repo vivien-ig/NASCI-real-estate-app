@@ -1,9 +1,12 @@
 import React from "react";
 import "./news-detail.css";
 import NewsImg from "./new-img.png";
+import { SearchComp } from "src/components/search-comp/seacrch-comp";
 
 const NewsNewsDetail = () => (
   <div className="news-detail">
+    <SearchComp placeholder="Search" />
+
     <h2>News</h2>
     <br />
     <img src={NewsImg} alt="home" />
@@ -11,6 +14,8 @@ const NewsNewsDetail = () => (
     <span>
       Jan 09, 2023 <span>by Real Agent</span>
     </span>
+    <br />
+    <h2>Real Estate Market Booms as Home Sales Reach All-Time High</h2>
     <br />
     <p>
       The real estate market is booming as home sales reach an all-time high.

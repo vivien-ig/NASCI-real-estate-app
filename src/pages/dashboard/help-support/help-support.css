@@ -1,4 +1,4 @@
-.property_detail {
+.help-support {
   width: 75vw;
   min-height: 100vh;
   position: absolute;
@@ -10,9 +10,4 @@
 
   /* height: 80%; */
   padding: 2.5rem;
-}
-
-.property_detail .link_el {
-  font-size: 0.75rem;
-  text-decoration: underline;
 }

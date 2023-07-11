@@ -6,16 +6,20 @@ import newsImg from "./news_placeholder.svg";
 import { ReactSVG } from "react-svg";
 import { v4 as uuidv4 } from "uuid";
 import MapComp from "src/components/mapComp/mapComp";
+import { SearchComp } from "src/components/search-comp/seacrch-comp";
 
 const newsListArray = [1, 2, 3, 4];
 
 const Overview = () => (
   <div className="overview">
     <div className="overview_info">
-      <input placeholder="Search" type="text" />
+      <SearchComp placeholder="Search" />
+      {/* <input placeholder="Search" type="text" /> */}
       <br />
       <div className="overview_info_details">
         <span>Home</span>
+        <br />
+        <br />
         <span>
           Location: <ReactSVG src={Location} /> &nbsp;&nbsp;&nbsp;Ontario
         </span>

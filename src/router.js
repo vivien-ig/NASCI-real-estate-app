@@ -9,6 +9,9 @@ import Watchlist from "./pages/dashboard/watchlist/watchlist";
 import Estimator from "./pages/dashboard/estimator/estimator";
 import NewsNewsDetail from "./pages/dashboard/news/news-detail/news-detail";
 import Map from "./pages/dashboard/map/map";
+import MarketTrends from "./pages/dashboard/market-trends/market-trends";
+import Settings from "./pages/dashboard/settings/settings";
+import HelpSupport from "./pages/dashboard/help-support/help-support";
 export const router = createBrowserRouter([
   {
     path: "",
@@ -25,14 +28,20 @@ export const router = createBrowserRouter([
       {
         path: "property",
         element: <Property />,
-      },
-      {
-        path: "property/:id",
-        element: <PropertyDetail />,
+        children: [
+          {
+            path: ":propertyId",
+            element: <PropertyDetail />,
+          },
+        ],
       },
       {
         path: "news",
         element: <News />,
+      },
+      {
+        path: "market-trends",
+        element: <MarketTrends />,
       },
       {
         path: "map",
@@ -49,6 +58,16 @@ export const router = createBrowserRouter([
       {
         path: "estimator",
         element: <Estimator />,
+      },
+
+      {
+        path: "settings",
+        element: <Settings />,
+      },
+
+      {
+        path: "help-support",
+        element: <HelpSupport />,
       },
     ],
   },

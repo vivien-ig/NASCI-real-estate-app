@@ -13,76 +13,83 @@ import Setting from "../../assets/dashboardicons/setting.svg";
 import HelpSupport from "../../assets/dashboardicons/message-question.svg";
 import { ReactSVG } from "react-svg";
 
-const Sidebar = () => (
-  <div style={{ display: "flex", position: "relative" }}>
-    <div className="sidebar">
-      <div className="sidebar_logo">
-        <img src={logo} alt="Logo file" />
-      </div>
+const Sidebar = () => {
+  return (
+    <div style={{ display: "flex", position: "relative" }}>
+      <div className="sidebar">
+        <div className="sidebar_logo">
+          <img src={logo} alt="Logo file" />
+        </div>
 
-      <div className="sidebar_details">
-        <ul>
-          <li>
-            <Link className="link_el" to="/dashboard/overview">
-              <ReactSVG className="svg_icons" src={Overview} />
-              <span>Overview</span>
-            </Link>
-          </li>
-          <li>
-            <Link className="link_el" to="/dashboard/property">
-              <ReactSVG className="svg_icons" src={Property} />
-              <span>Property</span>
-            </Link>
-          </li>
-          <li>
-            <Link className="link_el" to="/dashboard/watch-list">
-              <ReactSVG className="svg_icons" src={WatchList} />
-              <span>WatchList</span>
-            </Link>
-          </li>
-          <li>
-            <Link className="link_el" to="/dashboard/market-trends">
-              <ReactSVG className="svg_icons" src={MarketTrends} />
-              <span>MarketTrends</span>
-            </Link>
-          </li>
-          <li>
-            <Link className="link_el" to="/dashboard/map">
-              <ReactSVG className="svg_icons" src={Map} />
-              <span>Map</span>
-            </Link>
-          </li>
-          <li>
-            <Link className="link_el" to="/dashboard/news">
-              <ReactSVG className="svg_icons" src={News} />
-              <span>News</span>
-            </Link>
-          </li>
-          <li>
-            <Link className="link_el" to="/dashboard/estimator">
-              <ReactSVG className="svg_icons" src={Estimator} />
-              <span>Estimator</span>
-            </Link>
-          </li>
-        </ul>
-      </div>
-      <div className="settings_profile">
-        <ul>
-          <li>
-            {" "}
-            <ReactSVG src={Setting} />
-            <span>Settings</span>
-          </li>
-          <li>
-            {" "}
-            <ReactSVG src={HelpSupport} />
-            <span>Help & Support</span>
-          </li>
-          <li>Settings</li>
-        </ul>
+        <div className="sidebar_details">
+          <ul>
+            <li>
+              <Link className="link_el" to="/dashboard/overview">
+                <ReactSVG className="svg_icons" src={Overview} />
+                <span>Overview</span>
+              </Link>
+            </li>
+            <li>
+              <Link className="link_el" to="/dashboard/property">
+                <ReactSVG className="svg_icons" src={Property} />
+                <span>Property</span>
+              </Link>
+            </li>
+            <li>
+              <Link className="link_el" to="/dashboard/watch-list">
+                <ReactSVG className="svg_icons" src={WatchList} />
+                <span>WatchList</span>
+              </Link>
+            </li>
+            <li>
+              <Link className="link_el" to="/dashboard/market-trends">
+                <ReactSVG className="svg_icons" src={MarketTrends} />
+                <span>MarketTrends</span>
+              </Link>
+            </li>
+            <li>
+              <Link className="link_el" to="/dashboard/map">
+                <ReactSVG className="svg_icons" src={Map} />
+                <span>Map</span>
+              </Link>
+            </li>
+            <li>
+              <Link className="link_el" to="/dashboard/news">
+                <ReactSVG className="svg_icons" src={News} />
+                <span>News</span>
+              </Link>
+            </li>
+            <li>
+              <Link className="link_el" to="/dashboard/estimator">
+                <ReactSVG className="svg_icons" src={Estimator} />
+                <span>Estimator</span>
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div className="settings_profile">
+          <ul>
+            <li>
+              <Link className="link_el" to="/dashboard/settings">
+                <ReactSVG className="svg_icons" src={Setting} />
+                <span>Settings</span>
+              </Link>
+            </li>
+            <li>
+              <Link className="link_el" to="/dashboard/help-support">
+                <ReactSVG className="svg_icons" src={HelpSupport} />
+                <span>Help & Support</span>
+              </Link>
+            </li>
+            <li style={{ display: "flex", flexDirection: "column" }}>
+              Isaac Zen
+              <span>isaaczen@mail.com</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default Sidebar;

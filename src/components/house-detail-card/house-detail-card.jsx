@@ -1,7 +1,7 @@
 import React from "react";
 import "./house-detail-card.css";
 import house from "./background-img.png";
-import { BlackBtn, GrayBtn } from "../buttons/buttons";
+import { BtnComp } from "../buttons/buttons";
 import { ReactSVG } from "react-svg";
 import Bedrooms from "./bed.svg";
 import SquareFeet from "./area.svg";
@@ -33,8 +33,8 @@ const ComponentsHouseDetailCard = () => (
         </span>
       </div>
       <div className="house-details-btns">
-        <GrayBtn />
-        <BlackBtn />
+        <BtnComp title="Make Enquiry" color="btn-grey" />
+        <BtnComp title="View Details" color="btn-black" />
       </div>
     </div>
   </div>
