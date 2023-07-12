@@ -82,6 +82,7 @@
 
 .signup_btns button:first-child {
   background-color: black;
+  cursor: pointer;
   color: white;
 }
 

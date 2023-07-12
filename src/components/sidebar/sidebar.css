@@ -8,6 +8,18 @@
   flex-direction: column;
   display: flex;
 }
+
+.sidebar-details {
+  width: 75vw;
+  min-height: 100vh;
+  position: absolute;
+  right: 0;
+  display: flex;
+  background-color: #f2f5f8;
+  flex-direction: column;
+  padding: 2.5rem;
+}
+
 .sidebar_logo {
   padding: 1.8rem;
   box-sizing: border-box;

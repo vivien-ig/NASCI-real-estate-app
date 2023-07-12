@@ -1,17 +1,3 @@
-.estimator {
-  width: 75vw;
-  min-height: 100vh;
-  position: absolute;
-  right: 0;
-  display: flex;
-
-  background-color: #f2f5f8;
-  flex-direction: column;
-
-  /* height: 80%; */
-  padding: 2.5rem;
-}
-
 .estimates_title {
   margin-top: 5.5rem;
   margin-bottom: 2rem;

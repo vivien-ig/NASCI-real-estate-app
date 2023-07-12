@@ -1,7 +1,12 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React from "react";
 import "./map.css";
-import { useJsApiLoader, GoogleMap } from "@react-google-maps/api";
+import {
+  useJsApiLoader,
+  GoogleMap,
+  Marker,
+  Autocomplete,
+} from "@react-google-maps/api";
 
 const Map = () => {
   const containerStyle = {
@@ -11,6 +16,7 @@ const Map = () => {
 
   const center = { lat: 37.7749, lng: -122.4194 };
   const { isLoaded } = useJsApiLoader({
+    libraries: ["places"],
     id: "google-map-script",
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
   });
@@ -28,15 +34,23 @@ const Map = () => {
 
   return isLoaded ? (
     <div className="map">
-      <GoogleMap
-        mapContainerStyle={containerStyle}
-        center={center}
-        zoom={4.5}
-        onLoad={onLoad}
-        onUnmount={onUnmount}
-      >
-        <></>
-      </GoogleMap>
+      <Autocomplete>
+        <input type="text" />
+      </Autocomplete>
+      <div className="map-element">
+        <GoogleMap
+          mapContainerStyle={containerStyle}
+          center={center}
+          zoom={6.5}
+          onLoad={onLoad}
+          onUnmount={onUnmount}
+          options={{
+            streetViewControl: false,
+          }}
+        >
+          <Marker position={center} />
+        </GoogleMap>
+      </div>
     </div>
   ) : (
     <></>

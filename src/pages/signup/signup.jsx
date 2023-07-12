@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./signup.css";
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../firebase.config";
+
+import { getAuth } from "firebase/auth";
 
 import signup_background from "../../assets/signup_background.png";
 import logo from "../../assets/logo.png";
@@ -12,14 +12,18 @@ const Sign = (props) => {
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
 
-  const sign = (e) => {
+  const sign = async (e) => {
     console.log(email, password);
     e.preventDefault();
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredentials) => {
-        console.log(userCredentials);
-      })
-      .catch((err) => console.log(err));
+    try {
+      const user = await getAuth().createUserWithEmailAndPassword(
+        email,
+        password
+      );
+      console.log(e);
+
+      console.log(user);
+    } catch (error) {}
   };
 
   const isRegister = props.isRegister;
@@ -36,7 +40,7 @@ const Sign = (props) => {
 
       <div className="right_component">
         <div className="formcomponent">
-          <form action="">
+          <form onSubmit={sign}>
             <h2>Create Account</h2>
 
             {isRegister ? (
@@ -64,6 +68,7 @@ const Sign = (props) => {
               <input
                 placeholder="Enter your email"
                 value={email}
+                required
                 onChange={(e) => {
                   setEmail(e.target.value);
                 }}
@@ -79,6 +84,7 @@ const Sign = (props) => {
                 placeholder="minimum of 8 characters"
                 type="password"
                 name="password"
+                required
                 value={password}
                 onChange={(e) => {
                   setPassword(e.target.value);
@@ -88,7 +94,7 @@ const Sign = (props) => {
             </label>
 
             <div className="signup_btns">
-              <button onClick={sign}>Create Account </button>
+              <button type="submit">Create Account </button>
               <br />
               or
               <br />

@@ -14,7 +14,7 @@ import HelpSupport from "../../assets/dashboardicons/message-question.svg";
 import { ReactSVG } from "react-svg";
 import { useLocation } from "react-router-dom";
 
-const Sidebar = () => {
+const Sidebar = ({ children }) => {
   const route = useLocation().pathname.split("/").slice(-1);
   const menu = [
     { route: "overview", title: "Overview", icon: Overview },
@@ -26,52 +26,57 @@ const Sidebar = () => {
     { route: "estimator", title: "Estimator", icon: Estimator },
   ];
   return (
-    <div style={{ display: "flex", position: "relative" }}>
-      <div className="sidebar">
-        <div className="sidebar_logo">
-          <img src={logo} alt="Logo file" />
-        </div>
+    <>
+      <div style={{ display: "flex", position: "relative" }}>
+        <div className="sidebar">
+          <div className="sidebar_logo">
+            <img src={logo} alt="Logo file" />
+          </div>
 
-        <div className="sidebar_details">
-          <ul>
-            {menu.map((el, index) => {
-              let isActive = el.route === route[0];
-              return (
-                <li key={index}>
-                  <Link
-                    className={isActive ? "sidebar_active link_el" : "link_el"}
-                    to={`/dashboard/${el.route}`}
-                  >
-                    <ReactSVG className="svg_icons" src={el.icon} />
-                    <span>{el.title}</span>
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-        <div className="settings_profile">
-          <ul>
-            <li>
-              <Link className="link_el" to="/dashboard/settings">
-                <ReactSVG className="svg_icons" src={Setting} />
-                <span>Settings</span>
-              </Link>
-            </li>
-            <li>
-              <Link className="link_el" to="/dashboard/help-support">
-                <ReactSVG className="svg_icons" src={HelpSupport} />
-                <span>Help & Support</span>
-              </Link>
-            </li>
-            <li style={{ display: "flex", flexDirection: "column" }}>
-              Isaac Zen
-              <span>isaaczen@mail.com</span>
-            </li>
-          </ul>
+          <div className="sidebar_details">
+            <ul>
+              {menu.map((el, index) => {
+                let isActive = el.route === route[0];
+                return (
+                  <li key={index}>
+                    <Link
+                      className={
+                        isActive ? "sidebar_active link_el" : "link_el"
+                      }
+                      to={`/dashboard/${el.route}`}
+                    >
+                      <ReactSVG className="svg_icons" src={el.icon} />
+                      <span>{el.title}</span>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+          <div className="settings_profile">
+            <ul>
+              <li>
+                <Link className="link_el" to="/dashboard/settings">
+                  <ReactSVG className="svg_icons" src={Setting} />
+                  <span>Settings</span>
+                </Link>
+              </li>
+              <li>
+                <Link className="link_el" to="/dashboard/help-support">
+                  <ReactSVG className="svg_icons" src={HelpSupport} />
+                  <span>Help & Support</span>
+                </Link>
+              </li>
+              <li style={{ display: "flex", flexDirection: "column" }}>
+                Isaac Zen
+                <span>isaaczen@mail.com</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
+      <div className="sidebar-details">{children}</div>
+    </>
   );
 };
 
