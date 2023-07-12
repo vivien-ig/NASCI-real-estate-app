@@ -16,3 +16,27 @@
   font-size: 0.75rem;
   text-decoration: underline;
 }
+
+.property_detail_info {
+  margin-top: 2rem;
+}
+
+.property_detail_info ol li {
+  display: flex;
+  list-style: none;
+  text-align: left;
+}
+
+.property_detail_info ol li span {
+  margin-right: 2rem;
+  font-size: 0.85rem;
+}
+
+.property_detail_info ol li ol {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+  width: 70%;
+  font-size: 0.875rem;
+  justify-content: space-between;
+}

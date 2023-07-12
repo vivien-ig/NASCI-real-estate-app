@@ -4,10 +4,15 @@
   position: absolute;
   right: 0;
   display: flex;
-
   background-color: #f2f5f8;
   flex-direction: column;
-
-  /* height: 80%; */
   padding: 2.5rem;
+}
+
+.watchlist_page_details {
+  display: grid;
+  margin-top: 2rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem 3rem;
+  width: 100%;
 }

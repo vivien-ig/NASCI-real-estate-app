@@ -73,7 +73,11 @@ export const router = createBrowserRouter([
   },
   {
     path: "signup",
-    element: <Sign />,
+    element: <Sign isRegister={true} />,
+  },
+  {
+    path: "signin",
+    element: <Sign isRegister={false} />,
   },
   {
     path: "/*",

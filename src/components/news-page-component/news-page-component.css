@@ -1,7 +1,8 @@
 .news-page-component {
   display: flex;
-  width: 85%;
+  width: 90%;
   margin-top: 5%;
+  /* background-color: white; */
   margin-top: 5%;
 }
 .news-page-component img {
@@ -14,4 +15,7 @@
 }
 .news-page-component-details h3 {
   font-size: 1.2rem;
+}
+.news-page-component-details span {
+  color: #5d5fef;
 }

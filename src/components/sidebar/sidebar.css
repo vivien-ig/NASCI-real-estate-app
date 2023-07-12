@@ -42,24 +42,16 @@
   width: 0.5rem;
 }
 
-.sidebar_details ul li:first-child:before {
-  /* border-left: 10px solid black; */
+.sidebar_active :before {
   content: "";
   position: absolute;
   left: 0;
-  /* top: 0; */
-  height: 5%;
-  width: 10px;
+  width: 0.75rem;
   background-color: black;
-  /* display: none; */
   display: block;
+  height: 2.5rem;
+  transform: translateY(-0.75rem);
 }
-
-/* .sidebar_details:before {
-} */
-
-/* .sidebar_details.active:before {
-} */
 
 .settings_profile {
   margin-top: auto;

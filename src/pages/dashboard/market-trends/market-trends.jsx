@@ -5,7 +5,7 @@ import { SearchComp } from "src/components/search-comp/seacrch-comp";
 const MarketTrends = () => (
   <div className="market-trends">
     <SearchComp placeholder="Search" />
-    Market Trends Component
+    <span>General Analytics</span> <strong>Market Trends Component</strong>
   </div>
 );
 
