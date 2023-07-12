@@ -14,7 +14,7 @@ const News = () => {
         <h2>News</h2>
         <div className="news_page_list">
           {array.map((el) => {
-            return <NewsPageComponent key={uuidv4()} />;
+            return <NewsPageComponent detail="/another" key={uuidv4()} />;
           })}
         </div>
       </section>

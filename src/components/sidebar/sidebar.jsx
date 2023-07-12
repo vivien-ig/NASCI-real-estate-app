@@ -12,8 +12,19 @@ import Estimator from "../../assets/dashboardicons/calculator.svg";
 import Setting from "../../assets/dashboardicons/setting.svg";
 import HelpSupport from "../../assets/dashboardicons/message-question.svg";
 import { ReactSVG } from "react-svg";
+import { useLocation } from "react-router-dom";
 
 const Sidebar = () => {
+  const route = useLocation().pathname.split("/").slice(-1);
+  const menu = [
+    { route: "overview", title: "Overview", icon: Overview },
+    { route: "property", title: "Property", icon: Property },
+    { route: "watch-list", title: "Watch List", icon: WatchList },
+    { route: "market-trends", title: "Market Trends", icon: MarketTrends },
+    { route: "map", title: "Map", icon: Map },
+    { route: "news", title: "News", icon: News },
+    { route: "estimator", title: "Estimator", icon: Estimator },
+  ];
   return (
     <div style={{ display: "flex", position: "relative" }}>
       <div className="sidebar">
@@ -23,48 +34,20 @@ const Sidebar = () => {
 
         <div className="sidebar_details">
           <ul>
-            <li>
-              <Link className="link_el" to="/dashboard/overview">
-                <ReactSVG className="svg_icons" src={Overview} />
-                <span>Overview</span>
-              </Link>
-            </li>
-            <li>
-              <Link className="link_el" to="/dashboard/property">
-                <ReactSVG className="svg_icons" src={Property} />
-                <span>Property</span>
-              </Link>
-            </li>
-            <li>
-              <Link className="link_el" to="/dashboard/watch-list">
-                <ReactSVG className="svg_icons" src={WatchList} />
-                <span>WatchList</span>
-              </Link>
-            </li>
-            <li>
-              <Link className="link_el" to="/dashboard/market-trends">
-                <ReactSVG className="svg_icons" src={MarketTrends} />
-                <span>MarketTrends</span>
-              </Link>
-            </li>
-            <li>
-              <Link className="link_el" to="/dashboard/map">
-                <ReactSVG className="svg_icons" src={Map} />
-                <span>Map</span>
-              </Link>
-            </li>
-            <li>
-              <Link className="link_el" to="/dashboard/news">
-                <ReactSVG className="svg_icons" src={News} />
-                <span>News</span>
-              </Link>
-            </li>
-            <li>
-              <Link className="link_el" to="/dashboard/estimator">
-                <ReactSVG className="svg_icons" src={Estimator} />
-                <span>Estimator</span>
-              </Link>
-            </li>
+            {menu.map((el, index) => {
+              let isActive = el.route === route[0];
+              return (
+                <li key={index}>
+                  <Link
+                    className={isActive ? "sidebar_active link_el" : "link_el"}
+                    to={`/dashboard/${el.route}`}
+                  >
+                    <ReactSVG className="svg_icons" src={el.icon} />
+                    <span>{el.title}</span>
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
         <div className="settings_profile">

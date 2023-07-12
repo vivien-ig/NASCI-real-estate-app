@@ -3,9 +3,9 @@ import "./house-detail-card.css";
 import house from "./background-img.png";
 import { BtnComp } from "../buttons/buttons";
 import { ReactSVG } from "react-svg";
-import Bedrooms from "./bed.svg";
-import SquareFeet from "./area.svg";
-import Bathrooms from "./bathtub.svg";
+import Bedrooms from "../../assets/properties/bed.svg";
+import SquareFeet from "../../assets/properties/area.svg";
+import Bathrooms from "../../assets/properties/bathtub.svg";
 
 // Pass Color as a prop
 const ComponentsHouseDetailCard = () => (
