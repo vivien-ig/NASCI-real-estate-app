@@ -1,9 +1,9 @@
 .btn {
-  padding: 0.65rem 0.5rem;
-  font-size: 0.65rem;
+  padding: 0.5rem;
+  font-size: 0.85rem;
   box-sizing: border-box;
   border: none;
-  width: 5rem;
+  height: 100%;
   cursor: pointer;
   /* outline: 1px solid black; */
 }

@@ -16,3 +16,7 @@ select {
   background-position: right 8px center;
   padding: 0.5rem;
 }
+
+.little-text {
+  font-size: 0.95rem;
+}

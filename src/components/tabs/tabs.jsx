@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./tabs.css";
 
 export default function Tabs() {
-  const [selectedTabs, setSelectedTabs] = useState(2);
+  const [selectedTabs, setSelectedTabs] = useState(1);
 
   const handleTabChange = (index) => {
     setSelectedTabs(index);
@@ -56,9 +56,9 @@ function TabsPanel(props) {
               <th></th>
               <th>
                 feet &nbsp;&nbsp;&nbsp;
-                <label class="switch">
+                <label className="switch">
                   <input type="checkbox" />
-                  <span class="slider round"></span>
+                  <span className="slider round"></span>
                 </label>{" "}
                 &nbsp;&nbsp;&nbsp; metres
               </th>
@@ -72,7 +72,7 @@ function TabsPanel(props) {
               <td>Detached</td>
               <td>
                 <h4>Levels</h4>
-              </td>{" "}
+              </td>
               <td>2 Stories</td>
             </tr>
             <tr>
@@ -82,7 +82,7 @@ function TabsPanel(props) {
               <td>1000-1500 sqft</td>
               <td>
                 <h4>Garage</h4>
-              </td>{" "}
+              </td>
               <td>2 Cars</td>
             </tr>
             <tr>
@@ -92,7 +92,7 @@ function TabsPanel(props) {
               <td>$5,000</td>
               <td>
                 <h4>Days Listed (Active)</h4>
-              </td>{" "}
+              </td>
               <td>10 Days</td>
             </tr>
             <tr>
@@ -102,7 +102,7 @@ function TabsPanel(props) {
               <td>25 feet x 118.5 feet</td>
               <td>
                 <h4>Approx. Age</h4>
-              </td>{" "}
+              </td>
               <td>51-99 years</td>
             </tr>
             <tr>
@@ -113,6 +113,7 @@ function TabsPanel(props) {
             </tr>
           </tbody>
         </table>
+
         <div style={{ fontSize: ".75rem" }}>
           <div style={{ display: "flex", flexDirection: "row" }}>
             <h4>Address</h4>&nbsp;&nbsp;&nbsp;

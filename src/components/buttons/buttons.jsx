@@ -5,7 +5,12 @@ import "./buttons.css";
 export function BtnComp(props) {
   return (
     <div>
-      <button className={`btn ${props.color}`}>{props.title}</button>
+      <button
+        style={{ padding: `${props.padding}`, fontSize: `${props.fontSize}` }}
+        className={`btn ${props.color}`}
+      >
+        {props.title}
+      </button>
     </div>
   );
 }

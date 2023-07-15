@@ -25,6 +25,7 @@
   display: flex;
   list-style: none;
   text-align: left;
+  align-items: center;
 }
 
 .property_detail_info ol li span {
@@ -72,11 +73,53 @@
 .property-mortage {
   margin-top: 3rem;
 }
+
+.property-mortage input {
+  width: 100%;
+  height: 2.5rem;
+}
 .property-mortage .flex-row {
   justify-content: left;
 }
 
 .property-mortage form {
-  width: 90%;
-  background-color: red;
+  width: 60%;
+  /* background-color: red; */
+}
+
+.property-down-payment,
+.property-rate-term {
+  gap: 1rem;
+  justify-content: space-between;
+  display: flex;
+}
+
+.property-rate-term input {
+  width: 100%;
+}
+.property-rate-term > div {
+  width: 100%;
+}
+.mortage-form label {
+  margin-bottom: 2rem !important;
+}
+/* .mortage-form select {
+  width: 100%;
+} */
+
+.property-school {
+  margin-top: 4rem;
+}
+
+.property-demographics {
+  margin-top: 2rem;
+  position: relative;
+}
+.property-sold-comparables {
+  position: relative;
+}
+
+.property-chart {
+  width: 60%;
+  margin-left: 20%;
 }
