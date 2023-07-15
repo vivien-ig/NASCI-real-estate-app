@@ -5,7 +5,7 @@ import ComponentsHouseDetailCard from "../../../components/house-detail-card/hou
 
 const Watchlist = () => (
   <div className="watchlist_page">
-    <SearchComp placeholder="Search Address keywords" />
+    <SearchComp title="Filter" placeholder="Search Address keywords" />
     <div className="watchlist_page_title">
       <strong>Watchlist</strong> Notifications
     </div>

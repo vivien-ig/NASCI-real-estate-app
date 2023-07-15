@@ -1,8 +1,18 @@
-*{
-  font-family: 'Manrope', sans-serif;
+* {
+  font-family: "Manrope", sans-serif;
   padding: 0;
   margin: 0;
 }
-html{
+html {
   text-rendering: optimizeLegibility;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("./assets/arrow-down.svg"); /* Replace with your custom arrow image */
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  padding: 0.5rem;
 }

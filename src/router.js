@@ -12,6 +12,7 @@ import Map from "./pages/dashboard/map/map";
 import MarketTrends from "./pages/dashboard/market-trends/market-trends";
 import Settings from "./pages/dashboard/settings/settings";
 import HelpSupport from "./pages/dashboard/help-support/help-support";
+import ProtectedRoute from "./protectedRoute";
 export const router = createBrowserRouter([
   {
     path: "",
@@ -19,7 +20,11 @@ export const router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <Dashboard />,
+    element: (
+      <ProtectedRoute>
+        <Dashboard />
+      </ProtectedRoute>
+    ),
     children: [
       {
         path: "overview",

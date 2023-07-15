@@ -5,7 +5,7 @@ import { SearchComp } from "src/components/search-comp/seacrch-comp";
 
 const NewsNewsDetail = () => (
   <div className="news-detail">
-    <SearchComp placeholder="Search" />
+    <SearchComp title="Filter" placeholder="Search" />
 
     <h2>News</h2>
     <br />

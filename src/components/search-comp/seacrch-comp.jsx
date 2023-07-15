@@ -13,7 +13,7 @@ export function SearchComp(props) {
         name=""
         id=" "
       />
-      <BtnComp title="Filter" color="btn-black" />
+      <BtnComp title={props.title} color="btn-black" />
     </div>
   );
 }

@@ -16,9 +16,9 @@ const Map = () => {
 
   const center = { lat: 37.7749, lng: -122.4194 };
   const { isLoaded } = useJsApiLoader({
-    libraries: ["places"],
     id: "google-map-script",
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
+    // libraries: ["places"],
   });
   // eslint-disable-next-line no-unused-vars
   const [map, setMap] = React.useState(null);
@@ -44,6 +44,7 @@ const Map = () => {
           zoom={6.5}
           onLoad={onLoad}
           onUnmount={onUnmount}
+          // libraries={["places"]}
           options={{
             streetViewControl: false,
           }}
@@ -55,6 +56,7 @@ const Map = () => {
   ) : (
     <></>
   );
+  // return <MapComp />;
 };
 
 export default Map;

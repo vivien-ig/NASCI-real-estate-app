@@ -13,8 +13,7 @@ const newsListArray = [1, 2, 3, 4];
 const Overview = () => (
   <div className="overview">
     <div className="overview_info">
-      <SearchComp placeholder="Search" />
-      {/* <input placeholder="Search" type="text" /> */}
+      <SearchComp title="Filter" placeholder="Search" />
       <br />
       <div className="overview_info_details">
         <span>Home</span>

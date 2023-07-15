@@ -40,3 +40,43 @@
   font-size: 0.875rem;
   justify-content: space-between;
 }
+
+.property-price-history {
+  margin-bottom: 2rem;
+}
+.property-price-history th {
+  font-weight: 100;
+}
+.property-price-history td {
+  font-size: 0.65rem;
+}
+
+.appraisal-svg {
+  width: 5rem;
+  height: 5rem;
+}
+
+/* .property-appraisal {
+  margin-left: 3rem;
+} */
+.property-appraisal > div {
+  display: flex;
+  margin-top: 2rem;
+  gap: 3rem;
+  text-align: left;
+  align-items: center;
+  line-height: 1.5rem;
+  font-size: 0.8rem;
+}
+
+.property-mortage {
+  margin-top: 3rem;
+}
+.property-mortage .flex-row {
+  justify-content: left;
+}
+
+.property-mortage form {
+  width: 90%;
+  background-color: red;
+}

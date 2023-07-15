@@ -9,7 +9,7 @@ const News = () => {
   return (
     <>
       <section className="news_page">
-        <SearchComp placeholder="Search news" />
+        <SearchComp title="Search" placeholder="Search news" />
         <br />
         <h2>News</h2>
         <div className="news_page_list">

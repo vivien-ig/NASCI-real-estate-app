@@ -10,13 +10,16 @@ import Bedrooms from "../../../../assets/properties/bed.svg";
 import SquareFeet from "../../../../assets/properties/area.svg";
 import Bathrooms from "../../../../assets/properties/bathtub.svg";
 import Car from "../../../../assets/properties/car.svg";
+import Appraisal from "../../../../assets/properties/appraisal.svg";
+import Tabs from "src/components/tabs/tabs";
+import { BtnComp } from "src/components/buttons/buttons";
 
 const PropertyDetail = () => {
   return (
     <>
       <div className="property_detail">
         {" "}
-        <SearchComp title="Filter" />
+        <SearchComp placeholder="Search Listings" title="Filter" />
         <Link className="link_el" to="/property">
           All properties 9789 Riverton CourtTr..{" "}
         </Link>
@@ -62,6 +65,76 @@ const PropertyDetail = () => {
               </ol>
             </li>
           </ol>
+        </div>
+        <div className="property-detail-tabs">
+          <div>
+            <Tabs />
+          </div>
+
+          <div className="property-price-history">
+            <h4>Price History</h4>
+            <br />
+            <table style={{ width: "70%" }}>
+              <tr>
+                <th>List Date</th>
+                <th>List Price</th>
+                <th>Status</th>
+                <th>End Date</th>
+                <th>Sold Price</th>
+              </tr>
+              <tr>
+                <td class="table-cell">08/05/2023</td>
+                <td class="table-cell">$702,000</td>
+                <td class="table-cell">For Sale</td>{" "}
+                <td class="table-cell">-</td>
+                <td class="table-cell">Not Sold yet</td>
+              </tr>
+              <tr>
+                <td class="table-cell">08/05/2023</td>
+                <td class="table-cell">$702,000</td>
+                <td class="table-cell">Terminated</td>{" "}
+                <td class="table-cell">-</td>
+                <td class="table-cell">Not Sold yet</td>
+              </tr>
+            </table>
+            <br />
+            <p className="flex-row" style={{ fontSize: ".75rem" }}>
+              *Real Estate boards require that you sign in to see the full
+              details of this property. Log in or Sign up to see price history.
+            </p>
+          </div>
+          <div className="property-appraisal">
+            <h2>Appraisal</h2>
+            <div>
+              <ReactSVG
+                beforeInjection={(svg) => {
+                  svg.classList.add("appraisal-svg");
+                }}
+                src={Appraisal}
+              />
+              <p>
+                Similar properties sold on average for: $851,403 <br />
+                This home is listed $71,403 below average sold prices for
+                similar properties.
+              </p>
+            </div>
+          </div>
+          <div className="property-mortage">
+            <span className="flex-row">
+              <h2>Mortage</h2>(Buying a home)
+            </span>
+            <form>
+              <label htmlFor="">Home Price</label>
+              <input type="text" />
+              <label htmlFor="">Down Payment</label>
+              <input type="text" name="" id="" />
+              <input type="text" name="" id="" />
+              <label htmlFor="">Rate</label>
+              <input type="text" />
+              <input type="text" />
+              <BtnComp title="Make Enquiry" color="btn-black" />
+            </form>
+          </div>
         </div>
       </div>
     </>

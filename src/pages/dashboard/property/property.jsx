@@ -14,7 +14,7 @@ const Property = () => {
     return (
       <section className="property">
         <div className="property_head">
-          <SearchComp placeholder="Search Address keywords" />
+          <SearchComp title="Filter" placeholder="Search Address keywords" />
 
           <span>Quick Filter</span>
           <div className="property_select">

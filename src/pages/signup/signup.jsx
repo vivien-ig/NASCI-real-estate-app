@@ -1,32 +1,42 @@
 import React, { useState } from "react";
 import "./signup.css";
 
-import { getAuth } from "firebase/auth";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase.config";
 
 import signup_background from "../../assets/signup_background.png";
 import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Sign = (props) => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [username, setUsername] = useState("");
+  const navigate = useNavigate();
+
+  const [userData, setUserData] = useState({
+    name: "",
+    password: "",
+    email: "",
+  });
 
   const sign = async (e) => {
-    console.log(email, password);
     e.preventDefault();
     try {
-      const user = await getAuth().createUserWithEmailAndPassword(
-        email,
-        password
+      const res = await createUserWithEmailAndPassword(
+        auth,
+        userData.email,
+        userData.password
       );
-      console.log(e);
-
-      console.log(user);
+      if (res.user.accessToken) navigate("/dashboard/overview");
     } catch (error) {}
   };
 
   const isRegister = props.isRegister;
+
+  const handleChanages = (e) => {
+    e.preventDefault();
+    const { name, value } = e.target;
+    setUserData((prev) => ({ ...prev, [name]: value }));
+  };
 
   return (
     <div className="signup">
@@ -51,10 +61,8 @@ const Sign = (props) => {
                     placeholder="Enter your name"
                     type="text"
                     name="name"
-                    value={username}
-                    onChange={(e) => {
-                      setUsername(e.target.value);
-                    }}
+                    value={userData.name}
+                    onChange={handleChanages}
                   />
                   <br />
                 </label>
@@ -67,13 +75,11 @@ const Sign = (props) => {
               <br />
               <input
                 placeholder="Enter your email"
-                value={email}
+                value={userData.email}
                 required
-                onChange={(e) => {
-                  setEmail(e.target.value);
-                }}
+                onChange={handleChanages}
                 type="email"
-                name="name"
+                name="email"
               />
               <br />
             </label>
@@ -85,10 +91,8 @@ const Sign = (props) => {
                 type="password"
                 name="password"
                 required
-                value={password}
-                onChange={(e) => {
-                  setPassword(e.target.value);
-                }}
+                value={userData.password}
+                onChange={handleChanages}
               />
               <br />
             </label>
