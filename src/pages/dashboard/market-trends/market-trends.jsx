@@ -75,13 +75,15 @@ const MarketTrends = () => (
         <br />
         <div className="flex-row space-between">
           {" "}
-          <span>Langley / Brookswood Langley / All Property Types</span>
+          <span className="little-text">
+            Langley / Brookswood Langley / All Property Types
+          </span>
           <span className="lte-font-weight">Last Updated: 10 Jan, 2023</span>
         </div>
       </div>
       <div className="market_trends_filter_description_info">
         <div className="market_trends_filter_description_info_general">
-          <h2>General Info</h2>
+          <h4>General Info</h4>
           <br />
           <span className="lte-font-weight">December 2022</span>
           <br />
@@ -108,7 +110,7 @@ const MarketTrends = () => (
           </div>
           <div className="market_trends_filter_description_info_marketinfo">
             <div className="market_trends_filter_description_info_marketinfo_title">
-              <h2>Market Info</h2>
+              <h4>Market Info</h4>
             </div>
             <div className="market_trends_filter_description_info_marketinfo_details">
               <ReactSVG src={Activity} />

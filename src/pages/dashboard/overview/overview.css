@@ -1,14 +1,3 @@
-/* .overview {
-  width: 75vw;
-  min-height: 100vh;
-  position: absolute;
-  right: 0;
-  display: flex;
-  background-color: #f2f5f8;
-  flex-direction: column;
-  padding: 2.5rem;
-} */
-
 .overview_info {
   flex: 2;
   color: black;
@@ -34,7 +23,7 @@
     "sales_price sales_price listings listings news news"
     "major_construction_zones major_construction_zones major_construction_zones major_construction_zones news news"
     "major_construction_zones major_construction_zones major_construction_zones major_construction_zones news news"
-    "overview_maps overview_maps overview_maps overview_maps overview_maps overview_maps "
+    "major_construction_zones major_construction_zones major_construction_zones major_construction_zones news news"
     "overview_maps overview_maps overview_maps overview_maps overview_maps overview_maps ";
   gap: 2rem 2rem;
   grid-auto-columns: 1fr; /* Set the width for automatically generated columns */

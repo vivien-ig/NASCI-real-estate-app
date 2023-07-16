@@ -93,6 +93,10 @@
   justify-content: space-between;
   display: flex;
 }
+.property_detail input {
+  padding: auto 1rem;
+  box-sizing: border-box;
+}
 
 .property-rate-term input {
   width: 100%;

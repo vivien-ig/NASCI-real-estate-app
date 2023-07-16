@@ -1,0 +1,27 @@
+.profile-component {
+  display: flex;
+  /* width: 100%; */
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.3rem;
+  gap: 4rem;
+}
+
+.profile-img {
+  flex: 1;
+}
+.profile-component img {
+  width: 25%;
+}
+
+.profile-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column-reverse;
+  font-size: 0.5rem;
+}
+
+.profile-drop-down {
+  flex: 1;
+}

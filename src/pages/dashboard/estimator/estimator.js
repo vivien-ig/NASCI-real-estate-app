@@ -1,6 +1,8 @@
 import React from "react";
 import "./estimator.css";
 import { BtnComp } from "../../../components/buttons/buttons";
+import Location from "../../../assets/dashboardicons/location.svg";
+import { ReactSVG } from "react-svg";
 
 const Estimator = () => (
   <div className="estimator">
@@ -11,15 +13,21 @@ const Estimator = () => (
         <em>~ variometrics</em>
       </span>
     </h2>
-    <div className="get-estimates">
+    <form className="get-estimates">
       <label htmlFor="">Your Address</label>
       <br />
+      <ReactSVG
+        beforeInjection={(svg) => {
+          svg.classList.add("estimates-location-icon");
+        }}
+        src={Location}
+      />
       <input
         type="text"
         placeholder="Type Address or click icon to select from map"
       />
       <BtnComp title="Get Estimates" color="btn-black" />
-    </div>
+    </form>
   </div>
 );
 

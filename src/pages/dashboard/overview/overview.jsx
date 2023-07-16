@@ -16,11 +16,12 @@ const Overview = () => (
       <SearchComp title="Filter" placeholder="Search" />
       <br />
       <div className="overview_info_details">
-        <span>Home</span>
+        <h3>Home</h3>
         <br />
         <br />
         <span>
-          Location: <ReactSVG src={Location} /> &nbsp;&nbsp;&nbsp;Ontario
+          Location: &nbsp;
+          <ReactSVG src={Location} /> &nbsp;&nbsp;Ontario
         </span>
       </div>
     </div>
@@ -38,7 +39,7 @@ const Overview = () => (
         <div className="listings_date">1 - 7 Jan , 22</div>
       </div>
       <div className="news">
-        <h2>News</h2>
+        <h4>News</h4>
         <div className="news_list">
           {newsListArray.map((el) => (
             <div key={uuidv4()} className="news_card">
@@ -46,7 +47,7 @@ const Overview = () => (
                 <img src={newsImg} alt="News" />
               </div>
               <div className="news_card_title">
-                Government of Canada increases tax on real estate
+                <h4>Government of Canada increases tax on real estate</h4>
               </div>
               <div className="news_card_date">
                 <ReactSVG className="svg_icons" src={Calendar} />

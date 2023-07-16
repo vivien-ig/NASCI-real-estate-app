@@ -80,16 +80,26 @@
   border: none;
 }
 
-.signup_btns button:first-child {
+.signup_btns > button:first-child {
   background-color: black;
   cursor: pointer;
   color: white;
 }
 
-.google_signup {
+.google-provider-btn .google_signup {
   background: white;
+  width: 100%;
   outline: 1px solid black;
   color: black;
+}
+.google-provider-btn {
+  position: relative;
+  width: 100%;
+}
+.signup-google-provider {
+  top: 0.65rem;
+  left: 7.5rem;
+  position: absolute;
 }
 
 .formcomponent p {

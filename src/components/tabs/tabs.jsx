@@ -128,6 +128,236 @@ function TabsPanel(props) {
         </div>
       </>
     );
-  if (props.index === 2) return <>"This is the second tab" </>;
-  if (props.index === 3) return <>"This is the third tab" </>;
+  if (props.index === 2)
+    return (
+      <>
+        <div className="property-detail-description">
+          <h4>Description</h4>
+          <br />
+          <p>
+            Terrific, Versatile Family/Investment Property. Thoughtfully Planned
+            Quality Renovations. Formal Separate Living & Dining Rooms. Huge
+            Kitchen W Farmhouse Sink, Garden Window, Large Breakfast Bar For
+            Prep + French Doors To Encl Heated Sunporch W/O To Fenced Yard, Bbq
+            Deck. Two 4 Pce Baths. W/I Entry Closet Is Plumbed For Laundry. Up
+            To Romantic Sunny Master W Balcony O/L Gardens,2 More Bdrms+3 Pce
+            Bath. Lower Flex Income 2 Bed Apt Or Offices W Kitchenette, Large
+            Bath & Laundry/Storage
+          </p>
+          <br />
+          <table>
+            <thead>
+              <tr>
+                <th>MLS® Number</th>
+                <th>W5863314</th>
+                <th>Locker</th>
+                <th>Owned</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <h4>Ensuite Laundry</h4>
+                </td>
+                <td>-</td>
+                <td>
+                  <h4>Balcony</h4>
+                </td>
+                <td>Open</td>
+              </tr>
+              <tr>
+                <td>
+                  <h4>Furnished</h4>
+                </td>
+                <td>-</td>
+                <td>
+                  <h4>Laundry Level</h4>
+                </td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>
+                  <h4>Exposure</h4>
+                </td>
+                <td>£</td>
+                <td>
+                  <h4>Exterior</h4>
+                </td>
+                <td>Alum Sliding and Block</td>
+              </tr>
+              <tr>
+                <td>
+                  <h4>Garage</h4>
+                </td>
+                <td>2 Cars</td>
+                <td>
+                  <h4>Approx. Age</h4>
+                </td>
+                <td>51-99 years</td>
+              </tr>
+              <tr>
+                <td>
+                  <h4>Stories</h4>
+                </td>
+                <td>6</td>
+                <td>
+                  <h4>Pets</h4>
+                </td>
+                <td>Allowed</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <h4>Corp Number</h4>
+                </td>
+                <td>2432</td>
+              </tr>
+            </tbody>
+          </table>
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <h3>Included in Maintenance Fee</h3>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <h4>Heat </h4>
+                </td>
+                <td>Yes</td>
+                <td>
+                  <h4>Hydro</h4>
+                </td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>
+                  <h4>Water</h4>
+                </td>
+                <td>Yes</td>
+                <td>
+                  <h4>Building Insurance</h4>
+                </td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>
+                  <h4>Condo Taxes</h4>
+                </td>
+                <td>-</td>
+                <td>
+                  <h4>Cable TV</h4>
+                </td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>
+                  <h4>Central Air</h4>
+                </td>
+                <td>Yes</td>
+                <td>
+                  <h4>Parking Maintenance</h4>
+                </td>
+                <td>Yes</td>
+              </tr>
+            </tbody>
+          </table>
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <h3>Utilities</h3>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <h4>Heat </h4>
+                </td>
+                <td>Forced Air</td>
+                <td>
+                  <h4>A/C</h4>
+                </td>
+                <td>Central Air</td>
+              </tr>
+              <tr>
+                <td>
+                  <h4>Heating Fuel</h4>
+                </td>
+                <td>Gas</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div className="property-extras">
+            <h3>Extras</h3>
+            <p>
+              Fridge, Stove, Dishwasher, Washer, Dryer, Exhaust Hood, All
+              Electric Light Fixtures, All Window Coverings.
+            </p>
+            <br />
+            <span>Listed by REAL BROKERS</span>
+            <br />
+            <br />
+            <p>
+              The listing data is provided under copyright by the Toronto Real
+              Estate Board. The listing data is deemed reliable but is not
+              guaranteed accurate by the Toronto Real Estate Board nor Zoocasa.
+            </p>
+          </div>
+        </div>
+      </>
+    );
+  if (props.index === 3)
+    return (
+      <>
+        <div className="property-rooms">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <h3>Rooms</h3>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <h4>Living: </h4>
+                </td>
+                <td>Main 11.48 x 11.80 ft</td>
+                <td>
+                  <h4>Dining:</h4>
+                </td>
+                <td>Main 11.81 x 13.12 ft</td>
+              </tr>
+              <tr>
+                <td>
+                  <h4>Kitchen: </h4>
+                </td>
+                <td>Main 11.80 x 13.12 ft</td>
+                <td>
+                  <h4>2nd Bedroom:</h4>
+                </td>
+                <td>Main 11.81 x 11.81 ft</td>
+              </tr>
+              <tr>
+                <td>
+                  <h4>Bedroom: </h4>
+                </td>
+                <td>Main 8.50 x 8.53 ft</td>
+                <td>
+                  <h4>3rd Bedroom:</h4>
+                </td>
+                <td>Main 11.81 x 11.81 ft</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </>
+    );
 }

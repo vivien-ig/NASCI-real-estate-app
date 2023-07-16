@@ -13,6 +13,7 @@ import Setting from "../../assets/dashboardicons/setting.svg";
 import HelpSupport from "../../assets/dashboardicons/message-question.svg";
 import { ReactSVG } from "react-svg";
 import { useLocation } from "react-router-dom";
+import Profile from "../profile/profile";
 
 const Sidebar = ({ children }) => {
   const route = useLocation().pathname.split("/").slice(-1);
@@ -67,10 +68,7 @@ const Sidebar = ({ children }) => {
                   <span>Help & Support</span>
                 </Link>
               </li>
-              <li style={{ display: "flex", flexDirection: "column" }}>
-                Isaac Zen
-                <span>isaaczen@mail.com</span>
-              </li>
+              <Profile />
             </ul>
           </div>
         </div>

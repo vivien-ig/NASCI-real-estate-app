@@ -311,9 +311,8 @@ const PropertyDetail = () => {
         </div>
         <div className="property-chart">
           <Pie data={generateRandomData()} />
-
-          <p className="little-text">Source: Statistics Canada - 2016 Census</p>
         </div>
+        <p className="little-text">Source: Statistics Canada - 2016 Census</p>
       </div>
     </>
   );

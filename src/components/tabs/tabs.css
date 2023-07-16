@@ -104,3 +104,8 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+.property-detail-description p {
+  line-height: 2rem;
+  font-size: 0.9rem;
+}

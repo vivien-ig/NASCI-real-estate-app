@@ -8,6 +8,8 @@ import signup_background from "../../assets/signup_background.png";
 import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { ReactSVG } from "react-svg";
+import GoogleProvider from "./google-provider.svg";
 
 const Sign = (props) => {
   const navigate = useNavigate();
@@ -52,6 +54,7 @@ const Sign = (props) => {
         <div className="formcomponent">
           <form onSubmit={sign}>
             <h2>Create Account</h2>
+            <br />
 
             {isRegister ? (
               <React.Fragment>
@@ -103,7 +106,15 @@ const Sign = (props) => {
               or
               <br />
               <br />
-              <button className="google_signup">Sign Up with Google</button>
+              <div className="google-provider-btn">
+                <button className="google_signup">Sign Up with Google</button>
+                <ReactSVG
+                  beforeInjection={(svg) => {
+                    svg.classList.add("signup-google-provider");
+                  }}
+                  src={GoogleProvider}
+                />
+              </div>
               <p>
                 By clicking on create account you hereby agree to our{" "}
                 <strong>Terms and Conditions</strong> and
