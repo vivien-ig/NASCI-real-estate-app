@@ -16,7 +16,7 @@ import { useLocation } from "react-router-dom";
 import Profile from "../profile/profile";
 
 const Sidebar = ({ children }) => {
-  const route = useLocation().pathname.split("/").slice(-1);
+  const route = useLocation().pathname.split("/").slice(1);
   const menu = [
     { route: "overview", title: "Overview", icon: Overview },
     { route: "property", title: "Property", icon: Property },
@@ -37,7 +37,7 @@ const Sidebar = ({ children }) => {
           <div className="sidebar_details">
             <ul>
               {menu.map((el, index) => {
-                let isActive = el.route === route[0];
+                let isActive = el.route === route[1];
                 return (
                   <li key={index}>
                     <Link

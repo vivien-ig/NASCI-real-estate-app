@@ -13,10 +13,20 @@ import MarketTrends from "./pages/dashboard/market-trends/market-trends";
 import Settings from "./pages/dashboard/settings/settings";
 import HelpSupport from "./pages/dashboard/help-support/help-support";
 import ProtectedRoute from "./protectedRoute";
+import Filter from "./components/modals/filter/filter";
+import Subscribe from "./components/modals/subscribe/subscribe";
 export const router = createBrowserRouter([
   {
     path: "",
     element: <Dashboard />,
+  },
+  {
+    path: "filter",
+    element: <Filter />,
+  },
+  {
+    path: "subscribe",
+    element: <Subscribe />,
   },
   {
     path: "/dashboard",
