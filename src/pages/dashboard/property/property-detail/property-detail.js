@@ -13,8 +13,8 @@ import Car from "../../../../assets/properties/car.svg";
 import Appraisal from "../../../../assets/properties/appraisal.svg";
 import Tabs from "src/components/tabs/tabs";
 import { BtnComp } from "src/components/buttons/buttons";
-import MapComp from "src/components/mapComp/mapComp";
-import { Chart as Chartjs } from "chart.js/auto";
+// import MapComp from "src/components/mapComp/mapComp";
+// import { Chart as Chartjs } from "chart.js/auto";
 import { Pie } from "react-chartjs-2";
 
 const PropertyDetail = () => {
