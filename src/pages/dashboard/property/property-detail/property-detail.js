@@ -46,7 +46,13 @@ const PropertyDetail = () => {
                 <strong>$4,500 </strong>
                 <br /> Rent Price
               </span>
-              <ReactSVG className="svg_icons" src={Estimator} />
+              <ReactSVG
+                beforeInjection={(svg) => {
+                  svg.classList.add("svg-estimator");
+                }}
+                className="svg_icons"
+                src={Estimator}
+              />
               &nbsp; View Estimates &nbsp; &nbsp;{" "}
               <small>View Price History</small>
             </li>
@@ -54,19 +60,19 @@ const PropertyDetail = () => {
               <ol>
                 <li>
                   <ReactSVG className="svg_icons" src={Bedrooms} />
-                  &nbsp; 2 Bedrooms
+                  &nbsp; <span>2 Bedrooms</span>
                 </li>
                 <li>
                   <ReactSVG className="svg_icons" src={Bathrooms} />
-                  &nbsp; 2 Bathrooms
+                  &nbsp; <span>2 Bathrooms</span>
                 </li>
                 <li>
                   <ReactSVG className="svg_icons" src={SquareFeet} />
-                  &nbsp; 1000 - 1500 square feet
+                  &nbsp; <span>1000 - 1500 square feet</span>
                 </li>
                 <li>
-                  <ReactSVG className="svg_icons" src={Car} /> &nbsp; 2 Car
-                  Garage
+                  <ReactSVG className="svg_icons" src={Car} /> &nbsp;{" "}
+                  <span>2 Car Garage</span>
                 </li>
               </ol>
             </li>
@@ -319,7 +325,15 @@ const PropertyDetail = () => {
 };
 
 function generateRandomData() {
-  const labels = ["Label 1", "Label 2", "Label 3", "Label 4", "Label 5"];
+  const labels = [
+    "$0-$29,999",
+    "$30,000-$59,999",
+    "60,000-$79,999",
+    "80,000-$99,999",
+    "100,000-$149,999",
+    "150,000-$199,999",
+    "200,000+",
+  ];
   const data = labels.map(() => Math.floor(Math.random() * 100));
   const backgroundColors = [
     "#FF6384",
@@ -327,6 +341,10 @@ function generateRandomData() {
     "#FFCE56",
     "#4BC0C0",
     "#9966FF",
+    "#FA6364",
+    "#32C2EB",
+    "#AFCE16",
+    "#4AC0C8",
   ];
 
   return {
