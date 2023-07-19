@@ -15,6 +15,7 @@ import HelpSupport from "./pages/dashboard/help-support/help-support";
 import ProtectedRoute from "./protectedRoute";
 import Filter from "./components/modals/filter/filter";
 import Subscribe from "./components/modals/subscribe/subscribe";
+import MapMarker from "./components/map-marker/mapmarker";
 export const router = createBrowserRouter([
   {
     path: "",
@@ -25,8 +26,8 @@ export const router = createBrowserRouter([
     element: <Filter />,
   },
   {
-    path: "subscribe",
-    element: <Subscribe />,
+    path: "marker",
+    element: <MapMarker />,
   },
   {
     path: "/dashboard",

@@ -1,41 +1,33 @@
-// import React, { useContext, useState, useEffect } from "react";
-// import { onAuthStateChanged } from "firebase/auth";
-// import { auth } from "../firebase.config";
-
-// export const AuthContext = React.createContext({
-//   name: null,
-//   email: null,
-//   accessToken: null,
-// });
-
-// // This is a hook that is used to modify your context
-// export function useUserContext() {
-//   return useContext(AuthContext);
-// }
-// export function AuthProvider({ children }) {
-//   const [currentUser, setCurrentUser] = useState({});
-
-//   // UseEffect is used just like ngOnit when the authProvider component is mounted on our tree
-//   useEffect(() => {
-//     onAuthStateChanged(auth, (user) => {
-//       setCurrentUser(user);
-//     });
-//   }, []);
-//   const value = {
-//     currentUser,
-//     setCurrentUser,
-//   };
-//   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
-// }
-
 import { createContext, useContext, useEffect, useState } from "react";
-import { onAuthStateChanged } from "firebase/auth";
+import { onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase.config";
 
 const userAuthContext = createContext();
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
+
+  function logIn(email, password) {
+    return signInWithEmailAndPassword(auth, email, password);
+  }
+  // function signUp(email, password, name) {
+  //     return createUserWithEmailAndPassword(auth, email, password);
+  // }
+
+  // function logOut() {
+  //     return signOut(auth);
+  // }
+
+  // function googleAuth() {
+  //     const provider = new GoogleAuthProvider();
+  //     return signInWithPopup(auth, provider)
+  // }
+
+  // function callFunction(name, data) {
+  //     const addMessage = httpsCallable(functions, name);
+  //     return addMessage(data)
+  // }
+
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentuser) =>
       setUser(currentuser)
@@ -47,7 +39,7 @@ export function AuthProvider({ children }) {
   }, []);
 
   return (
-    <userAuthContext.Provider value={{ user }}>
+    <userAuthContext.Provider value={{ logIn, user }}>
       {children}
     </userAuthContext.Provider>
   );
