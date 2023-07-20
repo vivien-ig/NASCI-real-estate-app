@@ -15,7 +15,7 @@ import HelpSupport from "./pages/dashboard/help-support/help-support";
 import ProtectedRoute from "./protectedRoute";
 import Filter from "./components/modals/filter/filter";
 import Subscribe from "./components/modals/subscribe/subscribe";
-import MapMarker from "./components/map-marker/mapmarker";
+import MapMarker from "./components/map-info-window/map-info-window";
 export const router = createBrowserRouter([
   {
     path: "",

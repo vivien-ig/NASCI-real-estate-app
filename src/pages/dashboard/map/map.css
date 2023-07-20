@@ -2,3 +2,9 @@
   width: 55%;
   position: relative;
 }
+
+.info-window-marker {
+  width: 100vh;
+  background-color: red;
+  height: 3rem;
+}

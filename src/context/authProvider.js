@@ -10,23 +10,6 @@ export function AuthProvider({ children }) {
   function logIn(email, password) {
     return signInWithEmailAndPassword(auth, email, password);
   }
-  // function signUp(email, password, name) {
-  //     return createUserWithEmailAndPassword(auth, email, password);
-  // }
-
-  // function logOut() {
-  //     return signOut(auth);
-  // }
-
-  // function googleAuth() {
-  //     const provider = new GoogleAuthProvider();
-  //     return signInWithPopup(auth, provider)
-  // }
-
-  // function callFunction(name, data) {
-  //     const addMessage = httpsCallable(functions, name);
-  //     return addMessage(data)
-  // }
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentuser) =>

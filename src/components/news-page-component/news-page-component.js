@@ -7,8 +7,6 @@ const NewsPageComponent = (props) => {
   const navigate = useNavigate();
 
   const newsDetails = () => {
-    console.log("This has been clicked", props.detail);
-
     navigate("/ddd");
   };
 

@@ -1,4 +1,4 @@
-.marker {
+.map-info-window {
   background-color: white;
   padding: 0.75rem;
   width: 40%;
@@ -10,32 +10,33 @@
   justify-content: center;
   align-items: center;
   color: black;
+  z-index: 50;
   /* clip-path: polygon(100% 0, 100% 90%, 50% 90%, 48% 100%, 45% 89%, 0 89%, 0 0); */
 }
 
-.marker-img {
+.map-info-window-img {
   flex: 1;
 }
-.marker img {
+.map-info-window img {
   width: 100%;
 }
-.marker-content {
+.map-info-window-content {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-.marker-content h3 {
+.map-info-window-content h3 {
   font-size: 0.8rem;
   margin-bottom: 0.5rem;
 }
 
-.marker ul {
+.map-info-window ul {
   display: flex;
   margin-top: 0.5rem;
   justify-content: space-between;
 }
-.marker ul li {
+.map-info-window ul li {
   text-decoration: none;
   list-style: none;
   display: flex;
