@@ -7,8 +7,9 @@ import { ReactSVG } from "react-svg";
 import { v4 as uuidv4 } from "uuid";
 // import MapComp from "src/components/mapComp/mapComp";
 import { SearchComp } from "src/components/search-comp/seacrch-comp";
+import Map from "../../../components/map/map";
 
-const newsListArray = [1, 2, 3, 4];
+const newsListArray = [1, 2, 3, 4, 5, 6];
 
 const Overview = () => (
   <div className="overview">
@@ -57,10 +58,14 @@ const Overview = () => (
           ))}
         </div>
       </div>
-      <div className="major_construction_zones">Major Construction</div>
+      <div className="major_construction_zones">
+        <h2>Major Construction</h2> <br />{" "}
+        <Map size={{ width: "47.5vw", height: "50vh" }} />
+      </div>
       <div className="overview_maps">
-        Maps
-        {/* <MapComp /> */}
+        <h2> Map </h2>
+        <br />
+        <Map size={{ width: "73.5vw", height: "60vh" }} />{" "}
       </div>
     </div>
   </div>

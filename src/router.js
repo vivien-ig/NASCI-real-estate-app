@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import Sign from "./pages/signup/signup";
+import Sign from "./pages/auth/signup/signup";
 import Property from "./pages/dashboard/property/property";
 import PropertyDetail from "./pages/dashboard/property/property-detail/property-detail";
 import Dashboard from "./pages/dashboard/dashboard";
@@ -17,10 +17,11 @@ import Filter from "./components/modals/filter/filter";
 import Subscribe from "./components/modals/subscribe/subscribe";
 import MapMarker from "./components/map-info-window/map-info-window";
 export const router = createBrowserRouter([
-  {
-    path: "",
-    element: <Dashboard />,
-  },
+  // {
+  //   path: "",
+  //   element: <Dashboard />,
+  // },
+  // REMOVE ALL THESES, THEY ARE ONLY FOR TESTING
   {
     path: "filter",
     element: <Filter />,
@@ -29,6 +30,12 @@ export const router = createBrowserRouter([
     path: "marker",
     element: <MapMarker />,
   },
+  {
+    path: "subscribe",
+    element: <Subscribe />,
+  },
+
+  // STOP HERE
   {
     path: "/dashboard",
     element: (
@@ -88,11 +95,12 @@ export const router = createBrowserRouter([
     ],
   },
   {
-    path: "signup",
+    path: "auth/signup",
+    index: true,
     element: <Sign isRegister={true} />,
   },
   {
-    path: "signin",
+    path: "auth/signin",
     element: <Sign isRegister={false} />,
   },
   {

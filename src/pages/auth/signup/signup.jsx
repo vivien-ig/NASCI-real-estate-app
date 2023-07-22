@@ -1,35 +1,36 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./signup.css";
-
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../firebase.config";
-
-import signup_background from "../../assets/signup_background.png";
-import logo from "../../assets/logo.png";
+import signup_background from "../../../assets/signup_background.png";
+import logo from "../../../assets/logo.png";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { ReactSVG } from "react-svg";
 import GoogleProvider from "./google-provider.svg";
+import { useUserAuth } from "src/context/authProvider";
+import { useLocation } from "react-router-dom";
 
 const Sign = (props) => {
   const navigate = useNavigate();
+  const { signUp, user } = useUserAuth();
+  const route = useLocation().pathname.split("/").slice(0)[1];
 
   const [userData, setUserData] = useState({
     name: "",
     password: "",
     email: "",
   });
+  useEffect(() => {
+    if (route === "auth" && user) navigate("/dashboard/overview");
+  }, []);
 
   const sign = async (e) => {
     e.preventDefault();
     try {
-      const res = await createUserWithEmailAndPassword(
-        auth,
-        userData.email,
-        userData.password
-      );
-      if (res.user.accessToken) navigate("/dashboard/overview");
-    } catch (error) {}
+      await signUp(userData.email, userData.password);
+      navigate("/dashboard/overview");
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const isRegister = props.isRegister;
