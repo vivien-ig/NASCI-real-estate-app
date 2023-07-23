@@ -6,6 +6,8 @@ import { SearchComp } from "src/components/search-comp/seacrch-comp";
 
 const array = [1, 1, 1, 1];
 const News = () => {
+  document.title = "News";
+
   return (
     <>
       <section className="news_page">
@@ -14,7 +16,12 @@ const News = () => {
         <h2>News</h2>
         <div className="news_page_list">
           {array.map((el) => {
-            return <NewsPageComponent detail="/another" key={uuidv4()} />;
+            return (
+              <NewsPageComponent
+                detail="/dashboard/news/another"
+                key={uuidv4()}
+              />
+            );
           })}
         </div>
       </section>

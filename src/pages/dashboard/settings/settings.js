@@ -1,10 +1,12 @@
 import React from "react";
 import "./settings.css";
 
-const Settings = () => (
+const Settings = () => {
+  document.title = "Settings";
+
   <div className="settings">
     <h2>Settings</h2>
-  </div>
-);
+  </div>;
+};
 
 export default Settings;

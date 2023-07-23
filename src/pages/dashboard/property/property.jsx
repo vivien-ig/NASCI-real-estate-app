@@ -7,6 +7,8 @@ import { useParams } from "react-router-dom";
 import { SearchComp } from "src/components/search-comp/seacrch-comp";
 
 const Property = () => {
+  document.title = "Property";
+
   let routeParams = useParams().propertyId;
 
   if (!routeParams) {

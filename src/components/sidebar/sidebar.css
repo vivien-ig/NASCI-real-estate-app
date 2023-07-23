@@ -3,14 +3,15 @@
   /* top: 0; */
   /* left: 0; */
   position: fixed;
-  width: 15vw;
-  color: #495057;
+  width: 20vw;
+  /* color: #495057; */
+
   flex-direction: column;
   display: flex;
 }
 
 .sidebar-details {
-  width: 75vw;
+  width: 80vw;
   min-height: 100vh;
   position: absolute;
   right: 0;
@@ -64,6 +65,9 @@
   height: 2.5rem;
   transform: translateY(-0.75rem);
 }
+.sidebar_active {
+  font-weight: 800;
+}
 
 .settings_profile {
   margin-top: auto;
@@ -74,6 +78,10 @@
 .overview_details > * {
   background-color: white;
   /* background-color: transparent; */
+}
+.settings_profile ul {
+  display: flex;
+  flex-direction: column;
 }
 .settings_profile ul li {
   list-style: none;

@@ -17,8 +17,11 @@ import { BtnComp } from "src/components/buttons/buttons";
 // eslint-disable-next-line no-unused-vars
 import { Chart as Chartjs } from "chart.js/auto";
 import { Pie } from "react-chartjs-2";
+import MapComp from "src/components/map/map";
 
 const PropertyDetail = () => {
+  document.title = "Property Detail";
+
   return (
     <>
       <div className="property_detail">
@@ -221,7 +224,9 @@ const PropertyDetail = () => {
         <div className="property-sold-comparables">
           <span>
             <strong>Sold Comparables </strong>| Rent Comparables
-            {/* <MapComp /> */}
+            <br />
+            <br />
+            <MapComp size={{ width: "65vw", height: "60vh" }} />
           </span>
         </div>
         <div className="property-demographics">
@@ -230,12 +235,17 @@ const PropertyDetail = () => {
           </span>
           <br />
           <br />
-          <p style={{ lineHeight: "1.8rem", width: "60%" }}>
-            The following demographic information is based on the dissemination
-            area as defined by Statistics Canada. A dissemination area contains,
-            on average, approximately 200 – 400 households and is often referred
-            to as a small neighbourhood.
-          </p>
+          <div>
+            <p style={{ lineHeight: "1.8rem", width: "100%" }}>
+              The following demographic information is based on the
+              dissemination area as defined by Statistics Canada. A
+              dissemination area contains, on average, approximately 200 – 400
+              households and is often referred to as a small neighbourhood.
+            </p>
+            <br />
+            <br />
+            <MapComp size={{ width: "65vw", height: "60vh" }} />
+          </div>
           {/* <MapComp /> */}
 
           <table style={{ width: "70%", marginTop: "3rem" }}>

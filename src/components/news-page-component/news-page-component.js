@@ -7,7 +7,7 @@ const NewsPageComponent = (props) => {
   const navigate = useNavigate();
 
   const newsDetails = () => {
-    navigate("/ddd");
+    navigate(props.detail);
   };
 
   return (

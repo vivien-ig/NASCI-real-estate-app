@@ -43,7 +43,6 @@ const MapComp = (props) => {
       setMapSize({ width: "75vw", height: "80vh" });
     }
   }, []);
-  document.title = "Maps";
   return (
     <Wrapper
       apiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}
@@ -134,7 +133,7 @@ function MarkerComp({ map, marker, setActiveMarker }) {
     markerRef.current.addEventListener("gmp-click", () => {
       console.log("I am at the marker ref");
       // Pass the ID's here
-      // navigate("/dashboard/property/ll");
+      navigate("/dashboard/property/ll");
 
       setActiveMarkerClick();
     });
@@ -185,7 +184,7 @@ export default MapComp;
 //   },
 // ];
 
-// function Map() {
+// function MapComp() {
 //   const { isLoaded } = useLoadScript({
 //     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY, // Add your API key
 //   });
@@ -236,4 +235,4 @@ export default MapComp;
 //   );
 // }
 
-// export default Map;
+// export default MapComp;

@@ -11,7 +11,7 @@ import { useLocation } from "react-router-dom";
 
 const Sign = (props) => {
   const navigate = useNavigate();
-  const { signUp, user } = useUserAuth();
+  const { signUp, user, logIn, updateUser, googleAuth } = useUserAuth();
   const route = useLocation().pathname.split("/").slice(0)[1];
 
   const [userData, setUserData] = useState({
@@ -19,16 +19,24 @@ const Sign = (props) => {
     password: "",
     email: "",
   });
+  const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     if (route === "auth" && user) navigate("/dashboard/overview");
-  }, []);
+  });
 
   const sign = async (e) => {
     e.preventDefault();
     try {
-      await signUp(userData.email, userData.password);
-      navigate("/dashboard/overview");
+      if (isRegister) {
+        setIsLoading(true);
+        const res = await signUp(userData.email, userData.password);
+        await updateUser(res.user, userData.name);
+      } else if (!isRegister) {
+        await logIn(userData.email, userData.password);
+      }
+      setIsLoading(false);
     } catch (error) {
+      setIsLoading(false);
       console.log(error);
     }
   };
@@ -54,7 +62,7 @@ const Sign = (props) => {
       <div className="right_component">
         <div className="formcomponent">
           <form onSubmit={sign}>
-            <h2>Create Account</h2>
+            <h2> {isRegister ? "Create Account " : "Sign In"}</h2>
             <br />
 
             {isRegister ? (
@@ -102,13 +110,21 @@ const Sign = (props) => {
             </label>
 
             <div className="signup_btns">
-              <button type="submit">Create Account </button>
+              <button type="submit">
+                {isLoading ? "Loading... " : isRegister ? "Sign Up" : "Sign In"}
+              </button>
               <br />
               or
               <br />
               <br />
               <div className="google-provider-btn">
-                <button className="google_signup">Sign Up with Google</button>
+                <button
+                  type="button"
+                  onClick={googleAuth}
+                  className="google_signup"
+                >
+                  Sign Up with Google
+                </button>
                 <ReactSVG
                   beforeInjection={(svg) => {
                     svg.classList.add("signup-google-provider");
@@ -125,7 +141,10 @@ const Sign = (props) => {
           </form>
         </div>
         <div className="signin_link">
-          Already have an account <Link href="#">Sign In</Link>
+          Already have an account
+          <Link className="link_el" to="/auth/signin">
+            Sign In
+          </Link>
         </div>
       </div>
     </div>

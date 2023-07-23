@@ -1,5 +1,5 @@
 .property_detail {
-  width: 75vw;
+  width: 80vw;
   min-height: 100vh;
   position: absolute;
   right: 0;
@@ -130,6 +130,6 @@
 }
 
 .property-chart {
-  width: 40%;
-  margin-left: 30%;
+  width: 50%;
+  margin-left: 25%;
 }

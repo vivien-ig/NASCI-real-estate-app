@@ -51,16 +51,18 @@ export const router = createBrowserRouter([
       {
         path: "property",
         element: <Property />,
-        children: [
-          {
-            path: ":propertyId",
-            element: <PropertyDetail />,
-          },
-        ],
+      },
+      {
+        path: "property/:propertyId",
+        element: <PropertyDetail />,
       },
       {
         path: "news",
         element: <News />,
+      },
+      {
+        path: "news/:newsId",
+        element: <NewsNewsDetail />,
       },
       {
         path: "market-trends",
@@ -70,10 +72,7 @@ export const router = createBrowserRouter([
         path: "map",
         element: <Map />,
       },
-      {
-        path: "news/:id",
-        element: <NewsNewsDetail />,
-      },
+
       {
         path: "watch-list",
         element: <Watchlist />,
