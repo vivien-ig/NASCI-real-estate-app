@@ -1,0 +1,8 @@
+.news_page_list button {
+  position: fixed;
+  top: 60vh;
+  right: 0;
+  background-color: #f2994a;
+  border: none;
+  padding: 1rem;
+}

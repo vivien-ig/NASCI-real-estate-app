@@ -13,9 +13,9 @@ import MarketTrends from "./pages/dashboard/market-trends/market-trends";
 import Settings from "./pages/dashboard/settings/settings";
 import HelpSupport from "./pages/dashboard/help-support/help-support";
 import ProtectedRoute from "./protectedRoute";
-import Filter from "./components/modals/filter/filter";
-import Subscribe from "./components/modals/subscribe/subscribe";
 import MapMarker from "./components/map-info-window/map-info-window";
+import FilterModal from "./components/modals/filter/filter";
+import SubscribeModal from "./components/modals/subscribe/subscribe";
 export const router = createBrowserRouter([
   // {
   //   path: "",
@@ -24,15 +24,15 @@ export const router = createBrowserRouter([
   // REMOVE ALL THESES, THEY ARE ONLY FOR TESTING
   {
     path: "filter",
-    element: <Filter />,
+    element: <FilterModal />,
+  },
+  {
+    path: "subscribe",
+    element: <SubscribeModal />,
   },
   {
     path: "marker",
     element: <MapMarker />,
-  },
-  {
-    path: "subscribe",
-    element: <Subscribe />,
   },
 
   // STOP HERE

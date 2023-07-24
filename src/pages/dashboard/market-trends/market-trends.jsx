@@ -9,6 +9,9 @@ import MessageQuestion from "../../../assets/dashboardicons/watchlist/message-qu
 import Activity from "../../../assets/dashboardicons/watchlist/activity.svg";
 import { ReactSVG } from "react-svg";
 
+import { Chart as Chartjs } from "chart.js/auto";
+import { Bar } from "react-chartjs-2";
+
 const MarketTrends = () => {
   document.title = "Market Trends";
 
@@ -134,8 +137,46 @@ const MarketTrends = () => {
           </div>
         </div>
       </div>
+
+      <div className="market-trends-langly-bar-chart">
+        <div className="market-trends-chart">
+          <Bar data={generateRandomData()} />
+        </div>
+      </div>
     </div>
   );
 };
+function generateRandomData() {
+  const labels = [
+    "$0-$29,999",
+    "$30,000-$59,999",
+    "60,000-$79,999",
+    "80,000-$99,999",
+    "100,000-$149,999",
+    "150,000-$199,999",
+    "200,000+",
+  ];
+  const data = labels.map(() => Math.floor(Math.random() * 100));
+  const backgroundColors = [
+    "#FF6384",
+    "#36A2EB",
+    "#FFCE56",
+    "#4BC0C0",
+    "#9966FF",
+    "#FA6364",
+    "#32C2EB",
+    "#AFCE16",
+    "#4AC0C8",
+  ];
 
+  return {
+    labels: labels,
+    datasets: [
+      {
+        data: data,
+        backgroundColor: backgroundColors,
+      },
+    ],
+  };
+}
 export default MarketTrends;

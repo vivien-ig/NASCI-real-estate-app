@@ -3,7 +3,7 @@ import "./subscribe.css";
 import { ReactSVG } from "react-svg";
 import CancelSvg from "../close-circle.svg";
 
-export default function Subscribe() {
+export default function SubscribeModal() {
   return (
     <>
       <div className="subscribe-modal">
@@ -19,24 +19,19 @@ export default function Subscribe() {
           new listings, market trends, and much more. Don’t miss out. Sign up
           for our newsletter today and stay ahead of the game.{" "}
           <strong>Join over 1,000 subscribers.</strong>
-          <form>
-            <label htmlFor="">Full Name</label>
-            <br />
-            <input
-              type="text"
-              name=""
-              id=""
-              placeholder="Enter your name"
-            />{" "}
-            <br />
-            <br />
-            <label htmlFor="">Email Address</label>
-            <br />
-            <input type="text" name="" id="" placeholder="Enter your email" />
-            <br />
-            <button>Subscribe</button>
-          </form>
         </p>
+        <form>
+          <label htmlFor="">Full Name</label>
+          <br />
+          <input type="text" name="" id="" placeholder="Enter your name" />{" "}
+          <br />
+          <br />
+          <label htmlFor="">Email Address</label>
+          <br />
+          <input type="text" name="" id="" placeholder="Enter your email" />
+          <br />
+          <button type="button"> Subscribe</button>
+        </form>
       </div>
     </>
   );

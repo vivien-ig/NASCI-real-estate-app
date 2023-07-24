@@ -20,6 +20,8 @@
 }
 .filter-header h3 {
   margin-bottom: 1rem;
+  font-weight: 500;
+  font-size: 1.35rem;
 }
 .filter-component h4 {
   margin-bottom: 1rem;
@@ -43,12 +45,6 @@
   display: block;
   transform: translate(-1rem, -0.75rem);
 }
-
-.amenities-input-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
 .amenities-input-grid input[type="checkbox"] {
 }
 
@@ -125,9 +121,10 @@
 
 .filter-property-details-column-1 input[type="number"] {
   width: 40%;
-}
-.filter-property-details-column-1 input[type="number"]::first-child {
-  margin-right: 2rem;
+  box-sizing: border-box;
+  height: 2rem;
+  margin-right: 5%;
+  padding-left: 1rem;
 }
 .filter-component input[type="range"] {
   -webkit-appearance: none;
