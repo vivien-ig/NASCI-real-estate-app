@@ -1,0 +1,63 @@
+[debug] [2023-07-25T08:47:03.468Z] ----------------------------------------------------------------------
+[debug] [2023-07-25T08:47:03.470Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init functions
+[debug] [2023-07-25T08:47:03.470Z] CLI Version:   12.4.5
+[debug] [2023-07-25T08:47:03.470Z] Platform:      darwin
+[debug] [2023-07-25T08:47:03.470Z] Node Version:  v18.16.1
+[debug] [2023-07-25T08:47:03.475Z] Time:          Tue Jul 25 2023 09:47:03 GMT+0100 (West Africa Standard Time)
+[debug] [2023-07-25T08:47:03.475Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-07-25T08:47:03.525Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-07-25T08:47:03.525Z] > authorizing via signed-in user (netactservicesinc@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/apple/Desktop/projects/Nasci/real-estate-app
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-07-25T08:47:03.528Z] Using project from CLI flag: real-estate-app-296eb
+[debug] [2023-07-25T08:47:03.529Z] > refreshing access token with scopes: []
+[debug] [2023-07-25T08:47:03.530Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-07-25T08:47:03.530Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-07-25T08:47:04.317Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-07-25T08:47:04.317Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-07-25T08:47:04.332Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/real-estate-app-296eb [none]
+[debug] [2023-07-25T08:47:05.303Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/real-estate-app-296eb 200
+[debug] [2023-07-25T08:47:05.304Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/real-estate-app-296eb {"projectId":"real-estate-app-296eb","projectNumber":"328008446426","displayName":"Real-Estate-App","name":"projects/real-estate-app-296eb","resources":{"hostingSite":"real-estate-app-296eb","realtimeDatabaseInstance":"real-estate-app-296eb-default-rtdb"},"state":"ACTIVE","etag":"1_010c6dec-e3a0-4cbe-aebb-3bcc414134ac"}
+[info] i  Using project real-estate-app-296eb (Real-Estate-App) 
+[info] 
+=== Functions Setup
+[debug] [2023-07-25T08:47:05.312Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-07-25T08:47:05.313Z] > authorizing via signed-in user (netactservicesinc@gmail.com)
+[debug] [2023-07-25T08:47:05.313Z] [iam] checking project real-estate-app-296eb for permissions ["firebase.projects.get"]
+[debug] [2023-07-25T08:47:05.313Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/real-estate-app-296eb:testIamPermissions [none]
+[debug] [2023-07-25T08:47:05.313Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/real-estate-app-296eb:testIamPermissions x-goog-quota-user=projects/real-estate-app-296eb
+[debug] [2023-07-25T08:47:05.313Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/real-estate-app-296eb:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-07-25T08:47:06.753Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/real-estate-app-296eb:testIamPermissions 200
+[debug] [2023-07-25T08:47:06.753Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/real-estate-app-296eb:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-07-25T08:47:06.754Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/real-estate-app-296eb/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-07-25T08:47:06.754Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/real-estate-app-296eb/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/real-estate-app-296eb
+[debug] [2023-07-25T08:47:06.757Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/real-estate-app-296eb/services/runtimeconfig.googleapis.com [none]
+[debug] [2023-07-25T08:47:06.757Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/real-estate-app-296eb/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/real-estate-app-296eb
+[debug] [2023-07-25T08:47:08.874Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/real-estate-app-296eb/services/runtimeconfig.googleapis.com 200
+[debug] [2023-07-25T08:47:08.875Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/real-estate-app-296eb/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2023-07-25T08:47:08.877Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/real-estate-app-296eb/services/cloudfunctions.googleapis.com 200
+[debug] [2023-07-25T08:47:08.877Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/real-estate-app-296eb/services/cloudfunctions.googleapis.com [omitted]
+[info] 
+Detected existing codebase(s): default
+
