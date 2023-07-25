@@ -8,6 +8,10 @@ import { ReactSVG } from "react-svg";
 import GoogleProvider from "./google-provider.svg";
 import { useUserAuth } from "src/context/authProvider";
 import { useLocation } from "react-router-dom";
+import { getFunctions, httpsCallable } from "firebase/functions";
+const functions = getFunctions();
+
+const addMessage = httpsCallable(functions, "addMessage");
 
 const Sign = (props) => {
   const navigate = useNavigate();
@@ -22,6 +26,14 @@ const Sign = (props) => {
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     if (route === "auth" && user) navigate("/dashboard/overview");
+
+    addMessage({ text: "I want to do a giveaway" })
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   });
 
   const sign = async (e) => {
