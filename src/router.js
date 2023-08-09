@@ -17,10 +17,10 @@ import MapMarker from "./components/map-info-window/map-info-window";
 import FilterModal from "./components/modals/filter/filter";
 import SubscribeModal from "./components/modals/subscribe/subscribe";
 export const router = createBrowserRouter([
-  // {
-  //   path: "",
-  //   element: <Dashboard />,
-  // },
+  {
+    path: "",
+    element: <Dashboard />,
+  },
   // REMOVE ALL THESES, THEY ARE ONLY FOR TESTING
   {
     path: "filter",

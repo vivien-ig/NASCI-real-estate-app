@@ -1,11 +1,11 @@
 .filter-component {
   padding: 1.5rem;
   outline: 1px solid black;
-  width: 60%;
+  /* width: 60%; */
   font-size: 70%;
   box-sizing: border-box;
-  margin-left: 20%;
-  margin-top: 7.5%;
+  /* margin-left: 20%; */
+  /* margin-top: 7.5%; */
 }
 
 .filter-listing-details {
@@ -52,7 +52,7 @@
   width: 70%;
   display: flex;
   height: 10rem;
-  margin-top: 3rem;
+  margin-top: 1.25rem;
   justify-content: left;
   gap: 3rem;
 }
@@ -163,4 +163,18 @@
 .flex-content {
   display: flex;
   column-gap: 1rem;
+}
+
+.filter-listing-beds h4,
+.filter-listing-bathroom h4 .filter-listing-parking h4 {
+  margin-bottom: 0.25rem;
+}
+
+.filter-listing-counter {
+  display: flex;
+  align-items: center;
+}
+
+.filter-listing-counter input {
+  margin-right: 0.5rem;
 }

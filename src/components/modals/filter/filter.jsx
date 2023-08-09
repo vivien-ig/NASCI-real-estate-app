@@ -3,6 +3,7 @@ import "./filter.css";
 import RefreshIcon from "./refresh.svg";
 import { ReactSVG } from "react-svg";
 import CancelIcon from "./close-circle.svg";
+import Counter from "../counter/counter";
 
 export default function FilterModal() {
   return (
@@ -62,12 +63,27 @@ export default function FilterModal() {
               <br />
               <div className="filter-listing-beds">
                 <h4>Beds</h4>
+                <div className="filter-listing-counter">
+                  <Counter />
+                  <input type="checkbox" name="" id="" />
+                  <span>or more</span>
+                </div>
               </div>
               <div className="filter-listing-bathroom">
                 <h4>Bathrooms</h4>
+                <div className="filter-listing-counter">
+                  <Counter />
+                  <input type="checkbox" name="" id="" />
+                  <span>or more</span>
+                </div>
               </div>
               <div className="filter-listing-parking">
                 <h4>Parking</h4>
+                <div className="filter-listing-counter">
+                  <Counter />
+                  <input type="checkbox" name="" id="" />
+                  <span>or more</span>
+                </div>
               </div>
 
               <br />
