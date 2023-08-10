@@ -9,7 +9,7 @@ import MessageQuestion from "../../../assets/dashboardicons/watchlist/message-qu
 import Activity from "../../../assets/dashboardicons/watchlist/activity.svg";
 import { ReactSVG } from "react-svg";
 
-import { Chart as Chartjs } from "chart.js/auto";
+// import { Chart as Chartjs } from "chart.js/auto";
 import { Bar } from "react-chartjs-2";
 
 const MarketTrends = () => {
