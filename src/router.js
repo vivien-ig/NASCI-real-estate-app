@@ -16,10 +16,16 @@ import ProtectedRoute from "./protectedRoute";
 import MapMarker from "./components/map-info-window/map-info-window";
 import FilterModal from "./components/modals/filter/filter";
 import SubscribeModal from "./components/modals/subscribe/subscribe";
+import { NewsProvider } from "./context/newsProvider";
 export const router = createBrowserRouter([
   {
     path: "",
-    element: <Dashboard />,
+
+    element: (
+      <ProtectedRoute>
+        <Dashboard />
+      </ProtectedRoute>
+    ),
   },
   // REMOVE ALL THESES, THEY ARE ONLY FOR TESTING
   {
@@ -40,7 +46,9 @@ export const router = createBrowserRouter([
     path: "/dashboard",
     element: (
       <ProtectedRoute>
-        <Dashboard />
+        <NewsProvider>
+          <Dashboard />
+        </NewsProvider>
       </ProtectedRoute>
     ),
     children: [

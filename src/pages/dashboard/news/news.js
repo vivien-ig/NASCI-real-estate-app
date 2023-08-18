@@ -6,6 +6,8 @@ import { SearchComp } from "src/components/search-comp/seacrch-comp";
 import Modal from "react-modal";
 import SubscribeModal from "src/components/modals/subscribe/subscribe";
 import FilterModal from "src/components/modals/filter/filter";
+// import { useNews } from "src/context/newsProvider";
+import { useNews } from "src/context/newsProvider";
 
 const customFilterStyles = {
   content: {
@@ -41,6 +43,8 @@ Modal.setAppElement("#root");
 
 const array = [1, 1, 1, 1];
 const News = () => {
+  // const { news } = useNews();
+
   document.title = "News";
 
   const [modalIsOpen, setIsOpen] = React.useState(false);
@@ -65,6 +69,7 @@ const News = () => {
   function closeFilterModal() {
     setFilterIsOpen(false);
   }
+  const { news } = useNews();
 
   return (
     <>
@@ -94,11 +99,12 @@ const News = () => {
           <button onClick={openFilterModal} type="button">
             FilterModal
           </button>
-          {array.map((el) => {
+          {news.map((el) => {
             return (
               <NewsPageComponent
-                detail="/dashboard/news/another"
+                detail={`/dashboard/news/${el.id}`}
                 key={uuidv4()}
+                newsData={el}
               />
             );
           })}

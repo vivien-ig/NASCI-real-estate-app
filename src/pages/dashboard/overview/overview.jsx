@@ -8,10 +8,14 @@ import { v4 as uuidv4 } from "uuid";
 // import MapComp from "src/components/mapComp/mapComp";
 import { SearchComp } from "src/components/search-comp/seacrch-comp";
 import Map from "../../../components/map/map";
-
-const newsListArray = [1, 2, 3, 4, 5, 6];
+import { useNews } from "src/context/newsProvider";
 
 const Overview = () => {
+  const { news } = useNews();
+
+  function openNewsDetail() {
+    console.log("Open news detail");
+  }
   document.title = "Overview";
 
   return (
@@ -44,18 +48,21 @@ const Overview = () => {
         </div>
         <div className="news">
           <h4>News</h4>
-          <div className="news_list">
-            {newsListArray.map((el) => (
+          <div onClick={openNewsDetail} className="news_list">
+            {news.slice(3, 10).map((el) => (
               <div key={uuidv4()} className="news_card">
                 <div className="news_card_img">
                   <img src={newsImg} alt="News" />
                 </div>
-                <div className="news_card_title">
-                  <h4>Government of Canada increases tax on real estate</h4>
-                </div>
-                <div className="news_card_date">
-                  <ReactSVG className="svg_icons" src={Calendar} />
-                  <span>9, Jan, 2022</span>
+                <div className="news_card_content">
+                  <div className="news_card_title">
+                    <h5>{el.title}</h5>
+                  </div>
+                  <br />
+                  <div className="news_card_date">
+                    <ReactSVG className="svg_icons" src={Calendar} />
+                    <span>{el.publish_date}</span>
+                  </div>
                 </div>
               </div>
             ))}

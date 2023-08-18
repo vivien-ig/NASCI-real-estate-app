@@ -6,9 +6,7 @@ const ProtectedRoute = ({ children }) => {
   const { user } = useUserAuth();
 
   // Uncomment this out to protect routes
-  useEffect(() => {
-    console.log(user);
-  }, [user]);
+  useEffect(() => {}, [user]);
   if (user === null) {
     return <Navigate to="/auth/signup" replace />;
   }

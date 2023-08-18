@@ -4,7 +4,6 @@ import ComponentsHouseDetailCard from "../../../components/house-detail-card/hou
 import { v4 as uuidv4 } from "uuid";
 import { Outlet } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import { SearchComp } from "src/components/search-comp/seacrch-comp";
 
 const Property = () => {
   document.title = "Property";
@@ -16,7 +15,7 @@ const Property = () => {
     return (
       <section className="property">
         <div className="property_head">
-          <SearchComp title="Filter" placeholder="Search Address keywords" />
+          <div className="property_filters"></div>
 
           <span>Quick Filter</span>
           <div className="property_select">
