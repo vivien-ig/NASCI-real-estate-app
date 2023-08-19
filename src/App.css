@@ -25,3 +25,14 @@ select {
 button {
   cursor: pointer;
 }
+
+.startup_loading_screen svg {
+  width: 10% !important;
+}
+.startup_loading_screen {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30%;
+}

@@ -16,7 +16,9 @@ const ComponentsHouseDetailCard = () => {
   };
   return (
     <div onClick={handleClick} className="house-detail-card">
-      <img src={house} alt="house" />
+      <div className="house-detail-img">
+        <img src={house} alt="house" />
+      </div>
       <div className="house-details-data">
         <div className="house-details-top">
           <span className="house-details-forsale">For Sale</span>

@@ -93,7 +93,7 @@ const News = () => {
         <SearchComp title="Search" placeholder="Search news" />
         <br />
         <h2>News</h2>
-        {false ? (
+        {news ? (
           <div className="news_page_list">
             <button onClick={openModal} type="button">
               Subscribe
