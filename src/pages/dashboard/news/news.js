@@ -8,6 +8,8 @@ import SubscribeModal from "src/components/modals/subscribe/subscribe";
 import FilterModal from "src/components/modals/filter/filter";
 // import { useNews } from "src/context/newsProvider";
 import { useNews } from "src/context/newsProvider";
+import Loading from "src/pages/loading_animation.json";
+import Lottie from "lottie-react";
 
 const customFilterStyles = {
   content: {
@@ -41,7 +43,6 @@ const customStyles = {
 };
 Modal.setAppElement("#root");
 
-const array = [1, 1, 1, 1];
 const News = () => {
   // const { news } = useNews();
 
@@ -92,23 +93,33 @@ const News = () => {
         <SearchComp title="Search" placeholder="Search news" />
         <br />
         <h2>News</h2>
-        <div className="news_page_list">
-          <button onClick={openModal} type="button">
-            Subscribe
-          </button>
-          <button onClick={openFilterModal} type="button">
-            FilterModal
-          </button>
-          {news.map((el) => {
-            return (
-              <NewsPageComponent
-                detail={`/dashboard/news/${el.id}`}
-                key={uuidv4()}
-                newsData={el}
-              />
-            );
-          })}
-        </div>
+        {false ? (
+          <div className="news_page_list">
+            <button onClick={openModal} type="button">
+              Subscribe
+            </button>
+            <button onClick={openFilterModal} type="button">
+              FilterModal
+            </button>
+            {news.map((el) => {
+              return (
+                <NewsPageComponent
+                  detail={`/dashboard/news/${el.id}`}
+                  key={uuidv4()}
+                  newsData={el}
+                />
+              );
+            })}
+          </div>
+        ) : (
+          <>
+            <Lottie
+              className="news_loading_lottie"
+              animationData={Loading}
+              loop={true}
+            />
+          </>
+        )}
       </section>
       ;
     </>

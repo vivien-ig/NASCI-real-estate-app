@@ -5,11 +5,12 @@ import { useEffect } from "react";
 const ProtectedRoute = ({ children }) => {
   const { user } = useUserAuth();
 
-  // Uncomment this out to protect routes
   useEffect(() => {}, [user]);
-  if (user === null) {
-    return <Navigate to="/auth/signup" replace />;
-  }
+  setTimeout(() => {
+    if (user === null) {
+      return <Navigate to="/auth/signup" />;
+    }
+  }, 1000);
 
   return children;
 };

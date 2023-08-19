@@ -5,7 +5,7 @@
   position: fixed;
   width: 20vw;
   /* color: #495057; */
-
+  overflow: scroll;
   flex-direction: column;
   display: flex;
 }
@@ -64,9 +64,12 @@
   display: block;
   height: 2.5rem;
   transform: translateY(-0.75rem);
+  transition: all 0.1s ease-in;
 }
 .sidebar_active {
   font-weight: 800;
+  font-size: 1rem;
+  transition: all 0.1s ease-in;
 }
 
 .settings_profile {

@@ -241,6 +241,8 @@
 // -----------------------------------------------------------------------------------------------------------------------------------------------
 
 import React, { useState } from "react";
+import Lottie from "lottie-react";
+import LoadingMap from "src/pages/loading_animation.json";
 
 import {
   GoogleMap,
@@ -323,7 +325,11 @@ function Map(props) {
       <></>
     </GoogleMap>
   ) : (
-    <></>
+    <Lottie
+      className="map_loading_animation"
+      animationData={LoadingMap}
+      loop={true}
+    />
   );
 }
 

@@ -6,3 +6,14 @@
   border: none;
   padding: 1rem;
 }
+
+.news_loading_lottie svg {
+  width: 10% !important;
+}
+.news_loading_lottie {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20%;
+}

@@ -8,7 +8,7 @@ export default function Map() {
     <>
       <h3>Map</h3>
       <br />
-      <MapComp />
+      <MapComp size={{ width: "72.5vw", height: "60vh" }} />{" "}
     </>
   );
 }
