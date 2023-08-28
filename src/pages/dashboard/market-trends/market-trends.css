@@ -49,12 +49,7 @@
   text-align: center;
   width: 100%;
 }
-.flex-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
+
 .space-between {
   justify-content: space-between;
 }

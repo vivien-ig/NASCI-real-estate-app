@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./property-detail.css";
 import { SearchComp } from "src/components/search-comp/seacrch-comp";
 import { Link } from "react-router-dom";
@@ -39,7 +39,9 @@ const PropertyDetail = () => {
             </li>
             {/* <br /> */}
             <li>
-              <h3>9789 Riverview CourtTrenton, ON K8V 3S0</h3>
+              <h3 className="font-bold text-lg">
+                9789 Riverview CourtTrenton, ON K8V 3S0
+              </h3>
             </li>
             <br />
             <li>
@@ -118,7 +120,7 @@ const PropertyDetail = () => {
             </tbody>
           </table>
           <br />
-          <p className="flex-row little-text">
+          <p className=" little-text">
             *Real Estate boards require that you sign in to see the full details
             of this property. Log in or Sign up to see price history.
           </p>
@@ -141,7 +143,7 @@ const PropertyDetail = () => {
           </div>
         </div>
         <div className="property-mortage">
-          <span className="flex-row">
+          <span className="">
             <h4>Mortage</h4> &nbsp;&nbsp;
             <p className="little-text">(Buying a home)</p>
           </span>

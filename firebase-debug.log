@@ -1,0 +1,294 @@
+[debug] [2023-08-28T20:44:07.997Z] ----------------------------------------------------------------------
+[debug] [2023-08-28T20:44:07.998Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2023-08-28T20:44:07.999Z] CLI Version:   12.4.5
+[debug] [2023-08-28T20:44:07.999Z] Platform:      darwin
+[debug] [2023-08-28T20:44:07.999Z] Node Version:  v18.16.1
+[debug] [2023-08-28T20:44:08.004Z] Time:          Mon Aug 28 2023 21:44:07 GMT+0100 (West Africa Standard Time)
+[debug] [2023-08-28T20:44:08.005Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-08-28T20:44:08.074Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-08-28T20:44:08.074Z] > authorizing via signed-in user (netactservicesinc@gmail.com)
+[debug] [2023-08-28T20:44:08.075Z] [iam] checking project real-estate-app-296eb for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasedatabase.instances.update"]
+[debug] [2023-08-28T20:44:08.077Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/real-estate-app-296eb:testIamPermissions [none]
+[debug] [2023-08-28T20:44:08.077Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/real-estate-app-296eb:testIamPermissions x-goog-quota-user=projects/real-estate-app-296eb
+[debug] [2023-08-28T20:44:08.077Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/real-estate-app-296eb:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasedatabase.instances.update"]}
+[debug] [2023-08-28T20:44:19.321Z] *** [apiv2] error from fetch(https://cloudresourcemanager.googleapis.com/v1/projects/real-estate-app-296eb:testIamPermissions, {"headers":{},"method":"POST","body":"{\"permissions\":[\"cloudfunctions.functions.create\",\"cloudfunctions.functions.delete\",\"cloudfunctions.functions.get\",\"cloudfunctions.functions.list\",\"cloudfunctions.functions.update\",\"cloudfunctions.operations.get\",\"datastore.indexes.create\",\"datastore.indexes.delete\",\"datastore.indexes.list\",\"datastore.indexes.update\",\"firebase.projects.get\",\"firebasedatabase.instances.update\"]}"}): FetchError: request to https://cloudresourcemanager.googleapis.com/v1/projects/real-estate-app-296eb:testIamPermissions failed, reason: socket hang up
+[debug] [2023-08-28T20:44:19.323Z] [iam] error while checking permissions, command may fail: FirebaseError: Failed to make request to https://cloudresourcemanager.googleapis.com/v1/projects/real-estate-app-296eb:testIamPermissions
+[debug] [2023-08-28T20:44:19.324Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/real-estate-app-296eb/serviceAccounts/real-estate-app-296eb@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2023-08-28T20:44:19.324Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/real-estate-app-296eb/serviceAccounts/real-estate-app-296eb@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-08-28T20:44:30.333Z] *** [apiv2] error from fetch(https://iam.googleapis.com/v1/projects/real-estate-app-296eb/serviceAccounts/real-estate-app-296eb@appspot.gserviceaccount.com:testIamPermissions, {"headers":{},"method":"POST","body":"{\"permissions\":[\"iam.serviceAccounts.actAs\"]}"}): FetchError: request to https://iam.googleapis.com/v1/projects/real-estate-app-296eb/serviceAccounts/real-estate-app-296eb@appspot.gserviceaccount.com:testIamPermissions failed, reason: socket hang up
+[debug] [2023-08-28T20:44:30.334Z] [functions] service account IAM check errored, deploy may fail: Failed to make request to https://iam.googleapis.com/v1/projects/real-estate-app-296eb/serviceAccounts/real-estate-app-296eb@appspot.gserviceaccount.com:testIamPermissions {"name":"FirebaseError","children":[],"exit":1,"message":"Failed to make request to https://iam.googleapis.com/v1/projects/real-estate-app-296eb/serviceAccounts/real-estate-app-296eb@appspot.gserviceaccount.com:testIamPermissions","original":{"message":"request to https://iam.googleapis.com/v1/projects/real-estate-app-296eb/serviceAccounts/real-estate-app-296eb@appspot.gserviceaccount.com:testIamPermissions failed, reason: socket hang up","type":"system","errno":"ECONNRESET","code":"ECONNRESET"},"status":500}
+[debug] [2023-08-28T20:44:30.336Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/real-estate-app-296eb [none]
+[debug] [2023-08-28T20:44:42.274Z] *** [apiv2] error from fetch(https://firebase.googleapis.com/v1beta1/projects/real-estate-app-296eb, {"headers":{},"method":"GET","signal":{}}): FetchError: request to https://firebase.googleapis.com/v1beta1/projects/real-estate-app-296eb failed, reason: socket hang up
+[debug] [2023-08-28T20:44:42.275Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/real-estate-app-296eb (original: request to https://firebase.googleapis.com/v1beta1/projects/real-estate-app-296eb failed, reason: socket hang up)
+[debug] [2023-08-28T20:44:47.286Z] Error: Timed out.
+    at Timeout._onTimeout (/usr/local/lib/node_modules/firebase-tools/lib/utils.js:254:49)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-08-28T20:49:42.678Z] ----------------------------------------------------------------------
+[debug] [2023-08-28T20:49:42.680Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2023-08-28T20:49:42.680Z] CLI Version:   12.4.5
+[debug] [2023-08-28T20:49:42.680Z] Platform:      darwin
+[debug] [2023-08-28T20:49:42.680Z] Node Version:  v18.16.1
+[debug] [2023-08-28T20:49:42.686Z] Time:          Mon Aug 28 2023 21:49:42 GMT+0100 (West Africa Standard Time)
+[debug] [2023-08-28T20:49:42.686Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-08-28T20:49:42.774Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-08-28T20:49:42.775Z] > authorizing via signed-in user (netactservicesinc@gmail.com)
+[debug] [2023-08-28T20:49:42.775Z] [iam] checking project real-estate-app-296eb for permissions ["firebase.projects.get"]
+[debug] [2023-08-28T20:49:42.776Z] > refreshing access token with scopes: []
+[debug] [2023-08-28T20:49:42.777Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-08-28T20:49:42.777Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-08-28T20:49:43.309Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-08-28T20:49:43.310Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-08-28T20:49:43.324Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/real-estate-app-296eb:testIamPermissions [none]
+[debug] [2023-08-28T20:49:43.324Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/real-estate-app-296eb:testIamPermissions x-goog-quota-user=projects/real-estate-app-296eb
+[debug] [2023-08-28T20:49:43.324Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/real-estate-app-296eb:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-08-28T20:49:44.509Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/real-estate-app-296eb:testIamPermissions 200
+[debug] [2023-08-28T20:49:44.509Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/real-estate-app-296eb:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-08-28T20:49:44.511Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/real-estate-app-296eb [none]
+[debug] [2023-08-28T20:49:45.251Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/real-estate-app-296eb 200
+[debug] [2023-08-28T20:49:45.251Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/real-estate-app-296eb {"projectId":"real-estate-app-296eb","projectNumber":"328008446426","displayName":"Real-Estate-App","name":"projects/real-estate-app-296eb","resources":{"hostingSite":"real-estate-app-296eb","realtimeDatabaseInstance":"real-estate-app-296eb-default-rtdb"},"state":"ACTIVE","etag":"1_0311d415-7d0a-42ac-a64d-724bc81844a9"}
+[info] 
+[info] === Serving from '/Users/apple/Desktop/projects/Nasci/real-estate-app'...
+[info] 
+[debug] [2023-08-28T20:49:45.258Z] defaultcredentials: writing to file /Users/apple/.config/firebase/netactservicesinc_gmail_com_application_default_credentials.json
+[debug] [2023-08-28T20:49:45.260Z] Setting GAC to /Users/apple/.config/firebase/netactservicesinc_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/apple/.config/firebase/netactservicesinc_gmail_com_application_default_credentials.json"}}
+[debug] [2023-08-28T20:49:45.260Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/real-estate-app-296eb/adminSdkConfig [none]
+[debug] [2023-08-28T20:49:45.972Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/real-estate-app-296eb/adminSdkConfig 200
+[debug] [2023-08-28T20:49:45.972Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/real-estate-app-296eb/adminSdkConfig {"projectId":"real-estate-app-296eb","databaseURL":"https://real-estate-app-296eb-default-rtdb.firebaseio.com","storageBucket":"real-estate-app-296eb.appspot.com"}
+[info] i  functions: Watching "/Users/apple/Desktop/projects/Nasci/real-estate-app/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/apple/Desktop/projects/Nasci/real-estate-app/functions\" for Cloud Functions..."}}
+[debug] [2023-08-28T20:49:45.998Z] Validating nodejs source
+[debug] [2023-08-28T20:49:47.474Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "build": "echo 'No build step required for JavaScript functions.'",
+    "logs": "firebase functions:log",
+    "lint": ""
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.5.0",
+    "cors": "^2.8.5",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-08-28T20:49:47.474Z] Building nodejs source
+[debug] [2023-08-28T20:49:47.474Z] Failed to find version of module node: reached end of search path /Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-08-28T20:49:47.476Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-28T20:49:47.481Z] Found firebase-functions binary at '/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8684
+
+[debug] [2023-08-28T20:49:47.799Z] Got response from /__/functions.yaml {"endpoints":{"getListingFromApi":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"getListingFromApi"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: getListingFromApi. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: getListingFromApi."}}
+[info] ✔  functions[us-central1-getListingFromApi]: http function initialized (http://localhost:5000/real-estate-app-296eb/us-central1/getListingFromApi). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5000/real-estate-app-296eb/us-central1/getListingFromApi)."}}
+[debug] [2023-08-28T20:50:02.174Z] [work-queue] {"queuedWork":["/real-estate-app-296eb/us-central1/getListingFromApi-2023-08-28T20:50:02.174Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-08-28T20:50:02.174Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/real-estate-app-296eb/us-central1/getListingFromApi-2023-08-28T20:50:02.174Z"],"workRunningCount":1}
+[debug] [2023-08-28T20:50:02.175Z] Accepted request GET /real-estate-app-296eb/us-central1/getListingFromApi --> us-central1-getListingFromApi
+[debug] [2023-08-28T20:50:02.183Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-08-28T20:50:02.184Z] [functions] Got req.url=/real-estate-app-296eb/us-central1/getListingFromApi, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/real-estate-app-296eb/us-central1/getListingFromApi, mapping to path=/"}}
+[debug] [2023-08-28T20:50:02.190Z] [worker-pool] addWorker(us-central1-getListingFromApi) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-getListingFromApi)"}}
+[debug] [2023-08-28T20:50:02.191Z] [worker-pool] Adding worker with key us-central1-getListingFromApi, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-getListingFromApi, total=1"}}
+[debug] [2023-08-28T20:50:03.146Z] [runtime-status] [69249] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.10.1","resolution":"/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"[runtime-status] [69249] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.10.1\",\"resolution\":\"/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2023-08-28T20:50:03.148Z] [runtime-status] [69249] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"[runtime-status] [69249] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2023-08-28T20:50:03.148Z] [runtime-status] [69249] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"[runtime-status] [69249] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2023-08-28T20:50:03.148Z] [runtime-status] [69249] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"[runtime-status] [69249] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2023-08-28T20:50:03.313Z] [runtime-status] [69249] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"[runtime-status] [69249] Checked functions.config() {\"config\":{}}"}}
+[debug] [2023-08-28T20:50:03.313Z] [runtime-status] [69249] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.4.1","resolution":"/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/v1/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"[runtime-status] [69249] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/v1/index.js\"}}"}}
+[debug] [2023-08-28T20:50:03.314Z] [runtime-status] [69249] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"[runtime-status] [69249] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2023-08-28T20:50:03.314Z] [runtime-status] [69249] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.10.1","resolution":"/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"[runtime-status] [69249] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.10.1\",\"resolution\":\"/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2023-08-28T20:50:03.316Z] [runtime-status] [69249] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"[runtime-status] [69249] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2023-08-28T20:50:03.316Z] [runtime-status] [69249] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"11.10.1","resolution":"/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"[runtime-status] [69249] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"11.10.1\",\"resolution\":\"/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2023-08-28T20:50:03.342Z] [runtime-status] [69249] Functions runtime initialized. {"cwd":"/Users/apple/Desktop/projects/Nasci/real-estate-app/functions","node_version":"18.16.1"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"[runtime-status] [69249] Functions runtime initialized. {\"cwd\":\"/Users/apple/Desktop/projects/Nasci/real-estate-app/functions\",\"node_version\":\"18.16.1\"}"}}
+[debug] [2023-08-28T20:50:03.342Z] [runtime-status] [69249] Listening to port: /tmp/fire_emu_0eb5f4ff4094bce6.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"[runtime-status] [69249] Listening to port: /tmp/fire_emu_0eb5f4ff4094bce6.sock"}}
+[debug] [2023-08-28T20:50:03.414Z] [worker-us-central1-getListingFromApi-eab03788-27c9-4092-978f-0b5e36274abe]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"[worker-us-central1-getListingFromApi-eab03788-27c9-4092-978f-0b5e36274abe]: IDLE"}}
+[debug] [2023-08-28T20:50:03.415Z] [worker-pool] submitRequest(triggerId=us-central1-getListingFromApi) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-getListingFromApi)"}}
+[info] i  functions: Beginning execution of "us-central1-getListingFromApi" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"Beginning execution of \"us-central1-getListingFromApi\""}}
+[debug] [2023-08-28T20:50:03.415Z] [worker-us-central1-getListingFromApi-eab03788-27c9-4092-978f-0b5e36274abe]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"[worker-us-central1-getListingFromApi-eab03788-27c9-4092-978f-0b5e36274abe]: BUSY"}}
+[info] >  {"severity":"WARNING","message":"Request has invalid method. GET"} {"user":{"severity":"WARNING","message":"Request has invalid method. GET"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"\u001b[90m> \u001b[39m {\"severity\":\"WARNING\",\"message\":\"Request has invalid method. GET\"}"}}
+[info] >  {"severity":"ERROR","message":"Error: Invalid request, unable to process.\n    at entryFromArgs (/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/logger/index.js:130:19)\n    at Object.error (/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/logger/index.js:116:11)\n    at /Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/common/providers/https.js:405:24\n    at /Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/common/providers/https.js:394:25\n    at cors (/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/cors/lib/index.js:188:7)\n    at /Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/cors/lib/index.js:224:17\n    at originCallback (/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/cors/lib/index.js:214:15)\n    at /Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/cors/lib/index.js:219:13\n    at optionsCallback (/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/cors/lib/index.js:199:9)\n    at corsMiddleware (/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/cors/lib/index.js:204:7)"} {"user":{"severity":"ERROR","message":"Error: Invalid request, unable to process.\n    at entryFromArgs (/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/logger/index.js:130:19)\n    at Object.error (/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/logger/index.js:116:11)\n    at /Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/common/providers/https.js:405:24\n    at /Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/common/providers/https.js:394:25\n    at cors (/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/cors/lib/index.js:188:7)\n    at /Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/cors/lib/index.js:224:17\n    at originCallback (/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/cors/lib/index.js:214:15)\n    at /Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/cors/lib/index.js:219:13\n    at optionsCallback (/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/cors/lib/index.js:199:9)\n    at corsMiddleware (/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/cors/lib/index.js:204:7)"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"\u001b[90m> \u001b[39m {\"severity\":\"ERROR\",\"message\":\"Error: Invalid request, unable to process.\\n    at entryFromArgs (/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/logger/index.js:130:19)\\n    at Object.error (/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/logger/index.js:116:11)\\n    at /Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/common/providers/https.js:405:24\\n    at /Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/common/providers/https.js:394:25\\n    at cors (/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/cors/lib/index.js:188:7)\\n    at /Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/cors/lib/index.js:224:17\\n    at originCallback (/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/cors/lib/index.js:214:15)\\n    at /Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/cors/lib/index.js:219:13\\n    at optionsCallback (/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/cors/lib/index.js:199:9)\\n    at corsMiddleware (/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/cors/lib/index.js:204:7)\"}"}}
+[debug] [2023-08-28T20:50:03.420Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-getListingFromApi" in 5.37325ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"Finished \"us-central1-getListingFromApi\" in 5.37325ms"}}
+[debug] [2023-08-28T20:50:03.421Z] [worker-us-central1-getListingFromApi-eab03788-27c9-4092-978f-0b5e36274abe]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"[worker-us-central1-getListingFromApi-eab03788-27c9-4092-978f-0b5e36274abe]: IDLE"}}
+[debug] [2023-08-28T20:50:03.421Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-08-28T20:50:03.421Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-08-28T20:50:03.421Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-08-28T20:50:03.477Z] Functions emulator received unknown request at path /favicon.ico
+[debug] [2023-08-28T20:53:59.686Z] File /Users/apple/Desktop/projects/Nasci/real-estate-app/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/apple/Desktop/projects/Nasci/real-estate-app/functions/index.js changed, reloading triggers"}}
+[debug] [2023-08-28T20:54:00.690Z] Validating nodejs source
+[debug] [2023-08-28T20:54:01.372Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "build": "echo 'No build step required for JavaScript functions.'",
+    "logs": "firebase functions:log",
+    "lint": ""
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.5.0",
+    "cors": "^2.8.5",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-08-28T20:54:01.372Z] Building nodejs source
+[debug] [2023-08-28T20:54:01.372Z] Failed to find version of module node: reached end of search path /Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-08-28T20:54:01.373Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-28T20:54:01.378Z] Found firebase-functions binary at '/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8712
+
+[debug] [2023-08-28T20:54:01.695Z] Got response from /__/functions.yaml {"endpoints":{"getListingFromApi":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"getListingFromApi"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: getListingFromApi. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: getListingFromApi."}}
+[debug] [2023-08-28T20:54:01.701Z] [worker-pool] Shutting down IDLE worker (us-central1-getListingFromApi) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-getListingFromApi)"}}
+[debug] [2023-08-28T20:54:01.701Z] [worker-us-central1-getListingFromApi-eab03788-27c9-4092-978f-0b5e36274abe]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"[worker-us-central1-getListingFromApi-eab03788-27c9-4092-978f-0b5e36274abe]: FINISHING"}}
+[debug] [2023-08-28T20:54:01.710Z] [worker-us-central1-getListingFromApi-eab03788-27c9-4092-978f-0b5e36274abe]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"[worker-us-central1-getListingFromApi-eab03788-27c9-4092-978f-0b5e36274abe]: exited"}}
+[debug] [2023-08-28T20:54:01.710Z] [worker-us-central1-getListingFromApi-eab03788-27c9-4092-978f-0b5e36274abe]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"[worker-us-central1-getListingFromApi-eab03788-27c9-4092-978f-0b5e36274abe]: FINISHED"}}
+[debug] [2023-08-28T20:54:08.180Z] [work-queue] {"queuedWork":["/real-estate-app-296eb/us-central1/getListingFromApi-2023-08-28T20:54:08.179Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-08-28T20:54:08.181Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/real-estate-app-296eb/us-central1/getListingFromApi-2023-08-28T20:54:08.179Z"],"workRunningCount":1}
+[debug] [2023-08-28T20:54:08.181Z] Accepted request GET /real-estate-app-296eb/us-central1/getListingFromApi --> us-central1-getListingFromApi
+[debug] [2023-08-28T20:54:08.188Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-08-28T20:54:08.189Z] [functions] Got req.url=/real-estate-app-296eb/us-central1/getListingFromApi, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/real-estate-app-296eb/us-central1/getListingFromApi, mapping to path=/"}}
+[debug] [2023-08-28T20:54:08.189Z] [worker-pool] Cleaned up workers for us-central1-getListingFromApi: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-getListingFromApi: 1 --> 0"}}
+[debug] [2023-08-28T20:54:08.191Z] [worker-pool] addWorker(us-central1-getListingFromApi) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-getListingFromApi)"}}
+[debug] [2023-08-28T20:54:08.191Z] [worker-pool] Adding worker with key us-central1-getListingFromApi, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-getListingFromApi, total=1"}}
+[debug] [2023-08-28T20:54:08.968Z] [runtime-status] [69307] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.10.1","resolution":"/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"[runtime-status] [69307] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.10.1\",\"resolution\":\"/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2023-08-28T20:54:08.968Z] [runtime-status] [69307] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"[runtime-status] [69307] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2023-08-28T20:54:08.968Z] [runtime-status] [69307] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"[runtime-status] [69307] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2023-08-28T20:54:08.969Z] [runtime-status] [69307] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"[runtime-status] [69307] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2023-08-28T20:54:09.134Z] [runtime-status] [69307] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"[runtime-status] [69307] Checked functions.config() {\"config\":{}}"}}
+[debug] [2023-08-28T20:54:09.134Z] [runtime-status] [69307] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.4.1","resolution":"/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/v1/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"[runtime-status] [69307] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/v1/index.js\"}}"}}
+[debug] [2023-08-28T20:54:09.135Z] [runtime-status] [69307] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"[runtime-status] [69307] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2023-08-28T20:54:09.135Z] [runtime-status] [69307] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.10.1","resolution":"/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"[runtime-status] [69307] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.10.1\",\"resolution\":\"/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2023-08-28T20:54:09.137Z] [runtime-status] [69307] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"[runtime-status] [69307] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2023-08-28T20:54:09.137Z] [runtime-status] [69307] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"11.10.1","resolution":"/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"[runtime-status] [69307] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"11.10.1\",\"resolution\":\"/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2023-08-28T20:54:09.165Z] [runtime-status] [69307] Functions runtime initialized. {"cwd":"/Users/apple/Desktop/projects/Nasci/real-estate-app/functions","node_version":"18.16.1"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"[runtime-status] [69307] Functions runtime initialized. {\"cwd\":\"/Users/apple/Desktop/projects/Nasci/real-estate-app/functions\",\"node_version\":\"18.16.1\"}"}}
+[debug] [2023-08-28T20:54:09.165Z] [runtime-status] [69307] Listening to port: /tmp/fire_emu_b75c1994f6081b71.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"[runtime-status] [69307] Listening to port: /tmp/fire_emu_b75c1994f6081b71.sock"}}
+[debug] [2023-08-28T20:54:09.212Z] [worker-us-central1-getListingFromApi-d5aa537b-00cf-4a3a-8208-673046a39e6a]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"[worker-us-central1-getListingFromApi-d5aa537b-00cf-4a3a-8208-673046a39e6a]: IDLE"}}
+[debug] [2023-08-28T20:54:09.212Z] [worker-pool] submitRequest(triggerId=us-central1-getListingFromApi) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-getListingFromApi)"}}
+[info] i  functions: Beginning execution of "us-central1-getListingFromApi" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"Beginning execution of \"us-central1-getListingFromApi\""}}
+[debug] [2023-08-28T20:54:09.212Z] [worker-us-central1-getListingFromApi-d5aa537b-00cf-4a3a-8208-673046a39e6a]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"[worker-us-central1-getListingFromApi-d5aa537b-00cf-4a3a-8208-673046a39e6a]: BUSY"}}
+[info] >  {"severity":"WARNING","message":"Request has invalid method. GET"} {"user":{"severity":"WARNING","message":"Request has invalid method. GET"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"\u001b[90m> \u001b[39m {\"severity\":\"WARNING\",\"message\":\"Request has invalid method. GET\"}"}}
+[info] >  {"severity":"ERROR","message":"Error: Invalid request, unable to process.\n    at entryFromArgs (/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/logger/index.js:130:19)\n    at Object.error (/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/logger/index.js:116:11)\n    at /Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/common/providers/https.js:405:24\n    at /Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/common/providers/https.js:394:25\n    at cors (/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/cors/lib/index.js:188:7)\n    at /Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/cors/lib/index.js:224:17\n    at originCallback (/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/cors/lib/index.js:214:15)\n    at /Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/cors/lib/index.js:219:13\n    at optionsCallback (/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/cors/lib/index.js:199:9)\n    at corsMiddleware (/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/cors/lib/index.js:204:7)"} {"user":{"severity":"ERROR","message":"Error: Invalid request, unable to process.\n    at entryFromArgs (/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/logger/index.js:130:19)\n    at Object.error (/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/logger/index.js:116:11)\n    at /Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/common/providers/https.js:405:24\n    at /Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/common/providers/https.js:394:25\n    at cors (/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/cors/lib/index.js:188:7)\n    at /Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/cors/lib/index.js:224:17\n    at originCallback (/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/cors/lib/index.js:214:15)\n    at /Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/cors/lib/index.js:219:13\n    at optionsCallback (/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/cors/lib/index.js:199:9)\n    at corsMiddleware (/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/cors/lib/index.js:204:7)"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"\u001b[90m> \u001b[39m {\"severity\":\"ERROR\",\"message\":\"Error: Invalid request, unable to process.\\n    at entryFromArgs (/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/logger/index.js:130:19)\\n    at Object.error (/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/logger/index.js:116:11)\\n    at /Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/common/providers/https.js:405:24\\n    at /Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/firebase-functions/lib/common/providers/https.js:394:25\\n    at cors (/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/cors/lib/index.js:188:7)\\n    at /Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/cors/lib/index.js:224:17\\n    at originCallback (/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/cors/lib/index.js:214:15)\\n    at /Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/cors/lib/index.js:219:13\\n    at optionsCallback (/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/cors/lib/index.js:199:9)\\n    at corsMiddleware (/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/cors/lib/index.js:204:7)\"}"}}
+[debug] [2023-08-28T20:54:09.218Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-getListingFromApi" in 5.981084ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"Finished \"us-central1-getListingFromApi\" in 5.981084ms"}}
+[debug] [2023-08-28T20:54:09.218Z] [worker-us-central1-getListingFromApi-d5aa537b-00cf-4a3a-8208-673046a39e6a]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"[worker-us-central1-getListingFromApi-d5aa537b-00cf-4a3a-8208-673046a39e6a]: IDLE"}}
+[debug] [2023-08-28T20:54:09.218Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-08-28T20:54:09.218Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-08-28T20:54:09.219Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-08-28T20:56:31.947Z] File /Users/apple/Desktop/projects/Nasci/real-estate-app/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/apple/Desktop/projects/Nasci/real-estate-app/functions/index.js changed, reloading triggers"}}
+[debug] [2023-08-28T20:56:32.953Z] Validating nodejs source
+[debug] [2023-08-28T20:56:35.478Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "build": "echo 'No build step required for JavaScript functions.'",
+    "logs": "firebase functions:log",
+    "lint": ""
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.5.0",
+    "cors": "^2.8.5",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-08-28T20:56:35.478Z] Building nodejs source
+[debug] [2023-08-28T20:56:35.478Z] Failed to find version of module node: reached end of search path /Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-08-28T20:56:35.479Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-28T20:56:35.480Z] Found firebase-functions binary at '/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8382
+
+[debug] [2023-08-28T20:56:35.859Z] Got response from /__/functions.yaml {"endpoints":{"getListingFromApi":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"getListingFromApi"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: getListingFromApi. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: getListingFromApi."}}
+[debug] [2023-08-28T20:56:35.867Z] [worker-pool] Shutting down IDLE worker (us-central1-getListingFromApi) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-getListingFromApi)"}}
+[debug] [2023-08-28T20:56:35.867Z] [worker-us-central1-getListingFromApi-d5aa537b-00cf-4a3a-8208-673046a39e6a]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"[worker-us-central1-getListingFromApi-d5aa537b-00cf-4a3a-8208-673046a39e6a]: FINISHING"}}
+[debug] [2023-08-28T20:56:35.876Z] [worker-us-central1-getListingFromApi-d5aa537b-00cf-4a3a-8208-673046a39e6a]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"[worker-us-central1-getListingFromApi-d5aa537b-00cf-4a3a-8208-673046a39e6a]: exited"}}
+[debug] [2023-08-28T20:56:35.876Z] [worker-us-central1-getListingFromApi-d5aa537b-00cf-4a3a-8208-673046a39e6a]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-getListingFromApi"},"extension":{},"message":"[worker-us-central1-getListingFromApi-d5aa537b-00cf-4a3a-8208-673046a39e6a]: FINISHED"}}
+[debug] [2023-08-28T20:57:08.442Z] File /Users/apple/Desktop/projects/Nasci/real-estate-app/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/apple/Desktop/projects/Nasci/real-estate-app/functions/index.js changed, reloading triggers"}}
+[debug] [2023-08-28T20:57:09.445Z] Validating nodejs source
+[debug] [2023-08-28T20:57:10.213Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "build": "echo 'No build step required for JavaScript functions.'",
+    "logs": "firebase functions:log",
+    "lint": ""
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.5.0",
+    "cors": "^2.8.5",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-08-28T20:57:10.213Z] Building nodejs source
+[debug] [2023-08-28T20:57:10.213Z] Failed to find version of module node: reached end of search path /Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-08-28T20:57:10.217Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-28T20:57:10.218Z] Found firebase-functions binary at '/Users/apple/Desktop/projects/Nasci/real-estate-app/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8642
+
+[debug] [2023-08-28T20:57:10.642Z] Got response from /__/functions.yaml {"endpoints":{"getListingFromApi":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"getListingFromApi"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: getListingFromApi. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: getListingFromApi."}}

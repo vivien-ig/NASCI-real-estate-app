@@ -9,7 +9,6 @@ import { v4 as uuidv4 } from "uuid";
 import { SearchComp } from "src/components/search-comp/seacrch-comp";
 import Map from "../../../components/map/map";
 import { useNews } from "src/context/newsProvider";
-import Dropdown from "src/components/dropdown/dropdown";
 
 const Overview = () => {
   const { news } = useNews();
@@ -21,7 +20,6 @@ const Overview = () => {
 
   return (
     <div className="overview">
-      <Dropdown />
       <div className="overview_info">
         <SearchComp title="Filter" placeholder="Search" />
         <br />

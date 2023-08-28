@@ -17,6 +17,7 @@ import MapMarker from "./components/map-info-window/map-info-window";
 import FilterModal from "./components/modals/filter/filter";
 import SubscribeModal from "./components/modals/subscribe/subscribe";
 import { NewsProvider } from "./context/newsProvider";
+import { ListingsProvider } from "./context/listingsProvider";
 export const router = createBrowserRouter([
   {
     path: "",
@@ -47,7 +48,9 @@ export const router = createBrowserRouter([
     element: (
       <ProtectedRoute>
         <NewsProvider>
-          <Dashboard />
+          <ListingsProvider>
+            <Dashboard />
+          </ListingsProvider>
         </NewsProvider>
       </ProtectedRoute>
     ),
@@ -126,5 +129,6 @@ export const router = createBrowserRouter([
         CANT FIND THIS PAGE
       </div>
     ),
+    errorElement: <>This is the error Element component</>,
   },
 ]);

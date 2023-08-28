@@ -1,13 +1,3 @@
-/**
- * Import function triggers from their respective submodules:
- *
- * const {onDocumentWritten} = require("firebase-functions/v2/firestore");
- *
- * See a full list of supported triggers at https://firebase.google.com/docs/functions
- */
-
-// The Cloud Functions for Firebase SDK to create Cloud Functions and triggers.
-// const { logger } = require("firebase-functions");
 const { onCall } = require("firebase-functions/v2/https");
 const { onRequest } = require("firebase-functions/v2/https");
 // const { onDocumentCreated } = require("firebase-functions/v2/firestore");
@@ -15,23 +5,17 @@ const { onRequest } = require("firebase-functions/v2/https");
 // The Firebase Admin SDK to access Firestore.
 const { initializeApp } = require("firebase-admin/app");
 const { getFirestore } = require("firebase-admin/firestore");
-
-const cors = require("cors")({ origin: true });
+const { axios } = require("axios");
 
 initializeApp();
 
-// Take the text parameter passed to this HTTP endpoint and insert it into
-// Firestore under the path /messages/:documentId/original
-exports.addmessage = onCall({ cors: true }, async (req, res) => {
-  // Your function logic here
-  const original = req.query.text;
-  // Push the new message into Firestore using the Firebase Admin SDK.
-  const writeResult = await getFirestore()
-    .collection("messages")
-    .add({ original: original });
-  // Send back a message that we've successfully written the message
-  res.json({ result: `Message with ID: ${writeResult.id} added.` });
-  // This is where you process the request and send the response
+exports.getListingFromApi = onCall(async (req, res) => {
+  console.log(req);
+  // const listingData = await axios({
+  //   url: "https://api.remax.ca/api/v1/listings/distance?size=10&from=0&distance.centreLat=50.4079569&distance.centreLon=-104.6140568&distance.maxDistanceInMetre=10000&distance.sortByProximity=asc&features.priceListMin=379905&features.priceListMax=419895&features.listingTypeIds=100",
+  // });
 
-  // Grab the text parameter.
+  console.log("listingData");
+  return "listingData";
+  // res.status(200).json({d:"listingData"});
 });

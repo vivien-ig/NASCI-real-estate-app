@@ -8,9 +8,11 @@ import Uptrend from "../../../assets/dashboardicons/watchlist/trend-up.svg";
 import MessageQuestion from "../../../assets/dashboardicons/watchlist/message-question.svg";
 import Activity from "../../../assets/dashboardicons/watchlist/activity.svg";
 import { ReactSVG } from "react-svg";
+import Dropdown from "src/components/dropdown/dropdown";
 
 // import { Chart as Chartjs } from "chart.js/auto";
 import { Bar } from "react-chartjs-2";
+import Select from "src/components/select/select";
 
 const MarketTrends = () => {
   document.title = "Market Trends";
@@ -34,52 +36,47 @@ const MarketTrends = () => {
           <label htmlFor="">Province</label>
           <br />
           <br />
-          <select name="" id="">
-            <option value="British Columbia">British Columbia</option>
-          </select>
+
+          <Select />
         </div>
         <div className="market_trends_element">
           <label htmlFor="">Regional Area</label>
           <br />
           <br />
-          <select name="" id="">
-            <option value="British Columbia">Metro Vancuvar</option>
-          </select>
+          <Select />
         </div>
         <div className="market_trends_element">
           <label htmlFor="">City</label>
           <br />
           <br />
-          <select name="" id="">
-            <option value="British Columbia">Langley</option>
-          </select>
+          <Select />
         </div>
         <div className="market_trends_element">
           <label htmlFor="">Community</label>
           <br />
           <br />
-          <select name="" id="">
-            <option value="British Columbia">Brookswood Langsley</option>
-          </select>
+          <Select />
         </div>
         <div className="market_trends_element">
           <label htmlFor="">Property Type</label>
           <br />
           <br />
-          <select name="" id="">
+          {/* <select name="" id="">
             <option value="British Columbia">All property Type</option>
-          </select>
+          </select> */}
+
+          <Select />
         </div>
       </div>
 
       <div className="market_trends_filter_description">
-        <div className="market_trends_filter_description_title">
-          <br />
-          <br />
-          <span>Displaying for: </span>
-          <br />
-          <br />
-          <div className="flex-row space-between">
+        <div className="market_trends_filter_description_title mt-16">
+          {/* <br />
+          <br /> */}
+          <span className="mb-8">Displaying for: </span>
+          {/* <br />
+          <br /> */}
+          <div className=" space-between">
             {" "}
             <span className="little-text">
               Langley / Brookswood Langley / All Property Types
@@ -97,17 +94,17 @@ const MarketTrends = () => {
             <div className="market_trends_filter_description_info_general_details">
               <div className="median_price">
                 <ReactSVG src={DollarCircle} />
-                <span className="flex-row">
+                <span className="">
                   Median Price <ReactSVG src={MessageQuestion} />
                 </span>{" "}
                 <br />
-                <span className="flex-row">
+                <span className="">
                   $1,500,000 <ReactSVG src={Uptrend} />{" "}
                 </span>
               </div>
               <div className="listings_el">
                 <ReactSVG src={Listings} />
-                <span className="flex-row">
+                <span className="">
                   News Listings <ReactSVG src={MessageQuestion} />
                 </span>{" "}
                 <br />
@@ -120,10 +117,10 @@ const MarketTrends = () => {
               </div>
               <div className="market_trends_filter_description_info_marketinfo_details">
                 <ReactSVG src={Activity} />
-                <span className="flex-row">
+                <span className="">
                   Value Change <ReactSVG src={MessageQuestion} />
                 </span>
-                <span className="flex-row">
+                <span className="">
                   +3%
                   <ReactSVG
                     beforeInjection={(svg) => {
