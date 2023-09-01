@@ -16,7 +16,7 @@ const Overview = () => {
   function openNewsDetail() {
     console.log("Open news detail");
   }
-  document.title = "Overview";
+
 
   return (
     <div className="overview">
